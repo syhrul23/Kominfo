@@ -8,6 +8,7 @@
 body, html {
   height: 100%;
   margin: 0;
+  margin-right: 0;
   padding: 0;
 }
 
@@ -35,9 +36,40 @@ header {
   justify-content: space-between;
   align-items: center;
 }
+.nav-toggle {
+  display: none; /* Sembunyikan checkbox */
+}
+
+.nav-toggle-label span{
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+  justify-content: center;
+  margin-left: 16px;
+  z-index: 1001;
+}
+
+.nav-toggle-label span{
+  display: block;
+  height: 4px;
+  width: 100%;
+  background: #1238ab;
+  margin: 5px 0;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
 
 .logo img {
   height: 22px;
+  width: auto;
+  margin-left: 0px;
+}
+
+.logo{
+  margin-left: 0px;
 }
 
 .nav-menu a {
@@ -108,7 +140,7 @@ object-position: center center; /* Pastikan tengah yang muncul */
 .berita-terbaru {
   text-align: center;
   padding: 60px 20px;
-  background-color: #fefaf6;
+  background-color: #c7c6c5;
   color: #333;
 }
 
@@ -129,6 +161,7 @@ object-position: center center; /* Pastikan tengah yang muncul */
   flex-wrap: wrap;
   justify-content: center;
   gap: 30px;
+  width: 100%;
 }
 
 .card {
@@ -243,7 +276,7 @@ object-position: center center; /* Pastikan tengah yang muncul */
 }
 
 .layanan {
-  background-color: #f9f6ef;
+  background-color: #dadada;
   text-align: center;
   padding: 60px 20px;
   color: #333;
@@ -427,14 +460,58 @@ object-position: center center; /* Pastikan tengah yang muncul */
 }
 
 
-/*Responsive Styles*/
+/* Responsive untuk tablet */
 @media (max-width: 900px) {
-  .layanan-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .nav-toggle-label {
+    display: flex;
+  }
+  .nav-menu {
+    position: absolute;
+    top: 60px;
+    right: 26px;
+    background: rgba(255,255,255,0.97);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+    flex-direction: column;
+    align-items: flex-start;
+    width: 200px;
+    padding: 20px 0;
+    gap: 0;
+    display: none;
+    z-index: 1000;
+  }
+  .nav-menu a {
+    margin: 10px 20px;
+    width: 100%;
+  }
+  .nav-toggle:checked + .nav-toggle-label + .nav-menu {
+    display: flex;
   }
 }
-@media (max-width: 600px) {
-  .layanan-grid {
-    grid-template-columns: 1fr;
+/* Responsive untuk HP */
+@media (max-width: 767px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 8px;
+  }
+  .card {
+    width: 100%;
+    min-width: 0;
+  }
+  .card-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .footer {
+    padding: 30px 5px 10px;
+  }
+  .footer-container {
+    flex-direction: column;
+    gap: 10px;
+    padding: 0 5px;
+  }
+  .logo-container img,
+  .emoji-container img {
+    height: 60px;
   }
 }
