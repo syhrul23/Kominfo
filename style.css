@@ -8,7 +8,6 @@
 body, html {
   height: 100%;
   margin: 0;
-  margin-right: 0;
   padding: 0;
 }
 
@@ -30,6 +29,9 @@ header {
   box-shadow: 0 6px 15px rgba(0,0,0,0.2);
 }
 
+.page-wrapper {
+  flex: 1; /* Biar footer tetap di bawah */
+}
 
 .navbar {
   display: flex;
@@ -84,6 +86,58 @@ header {
   color: #FFBF00;
 }
 
+/* Dropdown container */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Tombol utama */
+.dropdown-toggle {
+  color: #1238ab;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px;
+  transition: 0.3s;
+}
+
+/* Dropdown menu tersembunyi awalnya */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: rgba(255,255,255,0.85); /* putih transparan */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  border-radius: 30px;
+  padding: 10px 0;
+  z-index: 1000;
+  min-width: 160px;
+
+}
+
+/* Tampilkan menu saat hover */
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Style link di dalam dropdown */
+.dropdown-menu a {
+  display: block;
+  padding: 5px 10px;
+  color: #1238ab;
+  text-decoration: none;
+  font-size: 14px;
+  white-space: nowrap;
+  align-items: center;
+}
+
+.dropdown-menu a:hover {
+  background-color: #f2f2f2;
+  color: #FFBF00;
+}
+
+
 .overlay {
   text-align: center;
   background: rgba(0, 0, 0, 0.4);
@@ -110,10 +164,11 @@ header {
 .search-box input {
   padding: 12px 20px;
   border-radius: 30px;
-  /* border: none; */
   width: 400px;
   max-width: 80%;
   font-size: 14px;
+  background: rgba(255,255,255,0.85); /* putih transparan */
+  border: none;
 }
 
 .carousel-caption-layer {
@@ -140,7 +195,7 @@ object-position: center center; /* Pastikan tengah yang muncul */
 .berita-terbaru {
   text-align: center;
   padding: 60px 20px;
-  background-color: #c7c6c5;
+  background-color: #fff5e6;
   color: #333;
 }
 
@@ -213,7 +268,7 @@ object-position: center center; /* Pastikan tengah yang muncul */
 .pejabat {
   text-align: center;
   padding: 60px 20px;
-  background-color: #fefaf6;
+  background-color: #ffffff;
   color: #333;
 }
 
@@ -276,7 +331,7 @@ object-position: center center; /* Pastikan tengah yang muncul */
 }
 
 .layanan {
-  background-color: #dadada;
+  background-color: #f7f4ef;
   text-align: center;
   padding: 60px 20px;
   color: #333;
@@ -316,9 +371,15 @@ object-position: center center; /* Pastikan tengah yang muncul */
   transform: translateY(-6px);
 }
 
-.layanan-card .icon {
+.layanan-card{
   font-size: 36px;
   color: #1238ab;
+  margin-bottom: 15px;
+}
+
+.icon {
+  font-size: 36px;
+  align-items: center;
   margin-bottom: 15px;
 }
 
@@ -329,7 +390,7 @@ object-position: center center; /* Pastikan tengah yang muncul */
 }
 
 .link-terkait {
-  background-color: #eeeeee;
+  background-color: #ebebec;
   text-align: center;
   padding: 60px 20px;
 }
@@ -385,6 +446,7 @@ object-position: center center; /* Pastikan tengah yang muncul */
   width:100vw;
   margin: 0;
   box-sizing: border-box;
+  position: relative;
 }
 
 .footer-container {
@@ -440,6 +502,13 @@ object-position: center center; /* Pastikan tengah yang muncul */
 .sosmed a:hover img {
   transform: scale(1.2);
 }
+
+.logo-x {
+  position: relative;  /* atau absolute jika ingin benar-benar mengambang */
+  z-index: 9999;
+  height: 10px;        
+}
+
 
 .footer-statistik ul {
   list-style: none;
