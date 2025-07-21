@@ -7,36 +7,42 @@
   <link rel="stylesheet" href="style.css" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="page-wrapper">
-  <header>
-    <div class="navbar">
-      <div class="logo">
-        <img src="logo kominfo.png" alt="Diskominfo Kota Bogor">
+    <div class="page-wrapper">
+      <header>
+        <div class="navbar">
+          <div class="logo">
+            <img src="logo kominfo.png" alt="Diskominfo Kota Bogor">
       </div>
-      <input type="checkbox" id="nav-toggle" class="nav-toggle" />
-      <label for="nav-toggle" class="nav-toggle-label">
-      <span></span>
-      <span></span>
-      <span></span>
-      </label>
       <nav class="nav-menu">
         <a href="#">Beranda</a>
-        <a href="#">Profil</a>
-        <a href="#">Publikasi</a>
+  
+        <div class="dropdown">
+          <a href="#" class="dropdown-toggle">Profil</a>  <!-- Tombol hover -->
+          <div class="dropdown-menu">                          <!-- Isi submenu -->
+            <a href="#">Visi Misi</a>
+            <a href="#">Sejarah</a>
+            <a href="#">Data Pegawai</a>
+            <a href="#">Struktural</a>
+          </div>
+        </div>
+        
+  <a href="#">Publikasi</a>
         <a href="#">Dokumen</a>
         <a href="#">Kontak</a>
       </nav>
+      </div>
     </div>
   </header>
     <!-- Konten utama halaman -->
   <!-- Carousel -->
+  <main>
     <div id="carouselExampleIndicators" class="carousel slide position-relative" data-bs-ride="carousel">
-        <div class="carousel-caption-layer position-absolute top-50 start-50 translate-middle text-center">
-            
+        <div class="carousel-caption-layer position-absolute top-50 start-50 translate-middle text-center"> 
      <section class="hero">
     <div class="overlay">
       <h1>DINAS KOMUNIKASI DAN INFORMATIKA</h1>
@@ -67,7 +73,6 @@
                 <img src="bg3.png" class="d-block w-100" alt="...">
             </div>
         </div>
-      </main>
 
         <!-- Navigasi -->
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
@@ -114,7 +119,7 @@
   </div>
 
   <div class="btn-wrapper">
-    <a href="#" class="btn-lihat">STRUKTUR SELENGKAPNYA</a>
+    <a href="#" class="btn-lihat">BERITA SELENGKAPNYA</a>
   </div>
 </section>
 <!-- Berita -->
@@ -155,35 +160,47 @@
     Sejumlah komponen dan resource yang diterapkan untuk memenuhi kebutuhan instansi pemerintahan daerah.
   </p>
 
-  <div class="layanan-grid">
-    <div class="layanan-card">
-      <div class="icon">🌐</div>
-      <p>Sub Domain, Hosting, & VPS<br><em>(Virtual Private Server)</em></p>
+<div class="layanan-grid">
+  <div class="layanan-card">
+    <div class="icon">
+      <i class="fa-solid fa-globe"></i>
     </div>
+    <p class="icon-description">Sub Domain, Hosting, & VPS<br><em>(Virtual Private Server)</em></p>
+  </div>
 
-    <div class="layanan-card">
-      <div class="icon">👥</div>
-      <p>Pembuatan Email Dinas</p>
+  <div class="layanan-card">
+    <div class="icon">
+      <i class="fa-solid fa-users"></i>
     </div>
+    <p class="icon-description">Pembuatan Email Dinas</p>
+  </div>
 
-    <div class="layanan-card">
-      <div class="icon">📄</div>
-      <p>Pengajuan TTE<br>(Tanda Tangan Elektronik)</p>
+     <div class="layanan-card">
+    <div class="icon">
+      <i class="fa-solid fa-layer-group"></i>
     </div>
+     <p>Pengajuan TTE<br>(Tanda Tangan Elektronik)</p>
+  </div>
 
-    <div class="layanan-card">
-      <div class="icon">🎵</div>
+   <div class="layanan-card">
+    <div class="icon">
+      <i class="fas fa-music"></i>
+    </div>
       <p>Pembuatan &<br>Pengembangan Aplikasi</p>
+  </div>
+     
+   <div class="layanan-card">
+    <div class="icon">
+      <i class="fas fa-database"></i>
     </div>
-
-    <div class="layanan-card">
-      <div class="icon">🛠️</div>
       <p>Reset password Email /<br>Passphrase TTE</p>
-    </div>
+  </div>
 
-    <div class="layanan-card">
-      <div class="icon">💻</div>
-      <p>Pembuatan dan Reset Akun<br>CPANEL</p>
+      <div class="layanan-card">
+    <div class="icon">
+    <i class="fas fa-code"></i>
+    </div>
+     <p>Pembuatan dan Reset Akun<br>CPANEL</p>
     </div>
   </div>
 </section>
@@ -210,7 +227,7 @@
 <!--banner-->
 </div>
 </div>
-
+</main>
 <!-- Footer -->
  <footer class="footer">
   <div class="footer-container">
@@ -237,7 +254,7 @@
         <a href="#"><img src="fb.png" alt="Facebook"></a>
         <a href="#"><img src="instagram.png" alt="Instagram"></a>
         <a href="#"><img src="youtube.png" alt="YouTube"></a>
-        <a href="#"><img src="twitter.png" alt="Twitter/X"></a>
+        <a href="#"><img src="twitter.png" class="logo-x" alt="Twitter/X"></a>
       </div>
     </div>
     <div class="footer-statistik">
@@ -254,5 +271,6 @@
 </footer>
 <!-- Footer -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <script src="scripts.js"></script>
 </body>
 </html>
