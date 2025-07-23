@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Cairo,sans-serif;
+  font-family: "Montserrat",sans-serif;
 }
 
 body, html {
@@ -65,13 +65,14 @@ header {
 
 
 .logo img {
-  height: 22px;
+  height: 30px;
   width: auto;
-  margin-left: 0px;
+  margin: 0px;
 }
 
 .logo{
-  margin-left: 0px;
+  margin: 0px;
+  padding: 0px;
 }
 
 .nav-menu a {
@@ -140,7 +141,7 @@ header {
 
 .overlay {
   text-align: center;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(255,255,255,0.20);
   padding: 30px;
   text-wrap: nowrap;
   border-radius: 10px;
@@ -159,6 +160,7 @@ header {
 
 .search-box {
   margin-top: 30px;
+  border:none;
 }
 
 .search-box input {
@@ -167,8 +169,9 @@ header {
   width: 400px;
   max-width: 80%;
   font-size: 14px;
-  background: rgba(255,255,255,0.85); /* putih transparan */
+  background: rgba(255,255,255,0.50); /* putih transparan */
   border: none;
+  text-align: center;
 }
 
 .carousel-caption-layer {
@@ -195,7 +198,7 @@ object-position: center center; /* Pastikan tengah yang muncul */
 .berita-terbaru {
   text-align: center;
   padding: 60px 20px;
-  background-color: #fff5e6;
+  background-color: #f7f4ef;
   color: #333;
 }
 
@@ -411,7 +414,7 @@ object-position: center center; /* Pastikan tengah yang muncul */
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 30px;
+  gap: 150px;
   margin-bottom: 60px;
 }
 .emoji-container {
@@ -421,11 +424,18 @@ object-position: center center; /* Pastikan tengah yang muncul */
   gap: 40px;
 }
 
-.logo-container img,
-.emoji-container img {
+.logo-container img{
   height: 100px;
   object-fit: contain;
   transition: transform 0.3s ease;
+  justify-content: center;
+}
+
+.emoji-container img {
+  height: 70px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+  justify-content: center;
 }
 
 .logo-container img:hover,
@@ -527,6 +537,20 @@ object-position: center center; /* Pastikan tengah yang muncul */
   font-weight: bold;
   color: #00ff99;
 }
+
+
+/*hiasam*/
+fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 
 
 /* Responsive untuk tablet */
