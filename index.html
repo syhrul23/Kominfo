@@ -22,16 +22,22 @@
         <a href="#">Beranda</a>
   
         <div class="dropdown">
-          <a href="#" class="dropdown-toggle">Profil</a>  <!-- Tombol hover -->
-          <div class="dropdown-menu">                          <!-- Isi submenu -->
-            <a href="#">Visi Misi</a>
-            <a href="#">Sejarah</a>
-            <a href="#">Data Pegawai</a>
+          <a href="#" class="dropdown-toggle">Profil</a>  
+          <div class="dropdown-menu">                          
+            <a href="visimisi.html">Visi Misi</a>
+            <a href="sejarah.html">Sejarah</a>
+            <a href="pegawai.html">Data Pegawai</a>
             <a href="#">Struktural</a>
           </div>
         </div>
         
-  <a href="#">Publikasi</a>
+  <div class="dropdown">
+          <a href="#" class="dropdown-toggle">Publikasi</a>  
+          <div class="dropdown-menu">                          
+            <a href="#">Galeri</a>
+            <a href="#">Berita</a>
+          </div>
+        </div>
         <a href="#">Dokumen</a>
         <a href="#">Kontak</a>
       </nav>
@@ -45,7 +51,7 @@
         <div class="carousel-caption-layer position-absolute top-50 start-50 translate-middle text-center"> 
      <section class="hero">
     <div class="overlay">
-      <h1>DINAS KOMUNIKASI DAN INFORMATIKA</h1>
+      <h1 id="typing-text">DINAS KOMUNIKASI DAN INFORMATIKA</h1>
       <h2>KOTA BOGOR</h2>
     </div>
   </section>
@@ -89,11 +95,11 @@
 
 <!-- Berita -->
     <section class="berita-terbaru">
-  <h2>BERITA TERBARU</h2>
+  <h2 class="fade-in">BERITA TERBARU</h2>
   <p>Berita atau artikel terbaru dari Dinas Komunikasi dan Informatika, Statistik dan Persandian Kota Bogor</p>
 
   <div class="card-container">
-    <div class="card">
+    <div class="card fade-in">
       <a href="detai-berita1.html" class="card" style="text-decoration: none; color: inherit;">
       <img src="berita komisi 3.jpeg" alt="Berita 1">
       <div class="card-caption">
@@ -111,7 +117,7 @@
     </div>
 
     <div class="card">
-      <img src="berita 3.jpg" alt="Berita 3">
+      <img src="bansos.webp" alt="Berita 3">
       <div class="card-caption">
         Bansos Juli 2025 Dimulai! Buruan Cek Rekening
       </div>
@@ -148,7 +154,7 @@
   </div>
 
   <div class="btn-wrapper">
-    <a href="#" class="btn-lihat">STRUKTUR SELENGKAPNYA</a>
+    <a href="pegawai.html" class="btn-lihat">STRUKTUR SELENGKAPNYA</a>
   </div>
 </section>
  <!-- Pejabat-->
@@ -211,10 +217,18 @@
   <p>Situs yang terkait dengan Dinas Komunikasi dan Informatika, Kota Bogor</p>
 
   <div class="logo-container">
-    <img src="bpbd.png" alt="BPBD Kota Bogor">
-    <img src="unnamed-removebg-preview.png" alt="Bogor Single Window">
-    <img src="kota bogor.png" alt="Kota Bogor">
-    <img src="bogor perkawis.png" alt="Kominfo Logo">
+    <a href="https://bpbd.kotabogor.go.id/" target="_blank" rel="noopener">
+      <img src="bpbd.png" alt="BPBD Kota Bogor">
+    </a>
+    <a href="https://bsw.kotabogor.go.id/" target="_blank" rel="noopener">
+      <img src="unnamed-removebg-preview.png" alt="Bogor Single Window">
+    </a>
+    <a href="https://kotabogor.go.id/" target="_blank" rel="noopener">
+      <img src="kota bogor.png" alt="Kota Bogor">
+    </a>
+    <a href="https://perkawis.kotabogor.go.id/" target="_blank" rel="noopener">
+      <img src="bogor perkawis.png" alt="Kominfo Logo">
+    </a>
   </div>
 
   <h3>INDIKATOR KEPUASAN</h3>
@@ -248,7 +262,7 @@
     Jl. Ir. H. Juanda No.10, RT.01/RW.01, Pabaton,<br>
     Kecamatan Bogor Tengah, Kota Bogor, Jawa Barat 16121<br><br>
     Telp: <a href="tel:+622518321075">+62251-8321075 Ext. 287</a><br>
-    e-mail Admin Web: <a href="mailto:kominfo@kotabogor.go.id">kominfo@kotabogor.go.id</a>
+    e-mail Admin Web: <a href="mailto:kominfo@kotabogor.go.id" target="_blank">kominfo@kotabogor.go.id</a>
   </p>
       <div class="sosmed">
   <a href="https://www.facebook.com/kominfokotabogor" target="_blank" rel="noopener"><img src="fb.png" alt="Facebook"></a>
