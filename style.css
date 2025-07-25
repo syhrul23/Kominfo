@@ -109,12 +109,11 @@ header {
   top: 100%;
   left: 0;
   background: rgba(255,255,255,0.85); /* putih transparan */
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 10px 18px rgba(0, 0, 0, 0.15);
   border-radius: 30px;
   padding: 10px 0;
   z-index: 1000;
   min-width: 160px;
-
 }
 
 /* Tampilkan menu saat hover */
@@ -131,10 +130,11 @@ header {
   font-size: 14px;
   white-space: nowrap;
   align-items: center;
+  margin: 15px;
 }
 
 .dropdown-menu a:hover {
-  background-color: #f2f2f2;
+  background-color: #f2f2f2;   
   color: #FFBF00;
 }
 
@@ -161,19 +161,36 @@ header {
 .search-box {
   margin-top: 30px;
   border:none;
+  align-items: center;
 }
 
-.search-box input {
-  padding: 12px 20px;
-  border-radius: 30px;
-  width: 400px;
-  max-width: 80%;
-  font-size: 14px;
-  background: rgba(255,255,255,0.50); /* putih transparan */
-  border: none;
+.search-container {
+  position: absolute;  
+  width: 100%;
+  align-items: center;
+  margin-top: 20px;
+  left: 11%;
+  max-width: 600px;
+}
+
+.search-container i {
+  position: absolute;
+  left: 29%;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #888;
+  font-size: 15px
+}
+
+.search-container input {
+  width: 100%;
+  padding: 10px 10px 10px 35px; /*padding kiri ditambah agar tidak nabrak icon */
+  border: 1px solid #ccc;
+  border-radius: 5px;
   text-align: center;
+  background-color: rgba(255, 255, 255, 0.5);
 }
-
+ 
 .carousel-caption-layer {
 z-index: 10;
 text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
@@ -347,7 +364,7 @@ object-position: center center; /* Pastikan tengah yang muncul */
 
 .layanan p {
   font-size: 15px;
-  color: #666;
+  color: black;
   max-width: 700px;
   margin: 0 auto 40px;
 }
@@ -363,7 +380,7 @@ object-position: center center; /* Pastikan tengah yang muncul */
 }
 
 .layanan-card {
-  background-color: #fff;
+  background-color: #35a1ff;
   border-radius: 15px;
   box-shadow: 4px 6px 12px rgba(0,0,0,0.1);
   padding: 12px 5px;
@@ -376,9 +393,28 @@ object-position: center center; /* Pastikan tengah yang muncul */
 
 .layanan-card{
   font-size: 36px;
-  color: #1238ab;
+  color: black;
   margin-bottom: 15px;
 }
+
+.layanan-card-1{
+  background-color:#ffe435;
+  border-radius: 15px;
+  box-shadow: 4px 6px 12px rgba(0,0,0,0.1);
+  padding: 12px 5px;
+  transition: transform 0.3s;
+}
+
+.layanan-card-1:hover {
+  transform: translateY(-6px);
+}
+
+.layanan-card-1{
+  font-size: 36px;
+  color: black;
+  margin-bottom: 15px;
+}
+
 
 .icon {
   font-size: 36px;
@@ -390,6 +426,75 @@ object-position: center center; /* Pastikan tengah yang muncul */
   font-size: 15px;
   font-weight: 500;
   line-height: 1.5;
+}
+
+/* === Banner Pemerintah Kota Bogor === */
+.banner-bogor {
+  background-color: #ffcc00;
+  padding: 20px 0;
+  width: 100%;
+  height: 200px;
+}
+
+.banner-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.banner-bogor {
+  background-color: #ffcc00; /* Warna kuning khas Bogor */
+  padding: 20px 40px;
+}
+
+.banner-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.logo-bogor {
+  width: 150px;
+  height: auto;
+  margin-top: 15px;
+  margin-left: 15%; 
+
+}
+
+.banner-bogor h1 {
+  color: #0033cc;
+  font-size: 45px;
+  font-weight: 800;
+  flex: 1;
+  font-family: 'Montserat', sans-serif;
+  align-items: center;
+}
+
+.banner-btn {
+  background-color: #4d6aff;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  width: 100px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.banner-btn i {
+  margin-left: 6px;
+}
+
+.banner-btn:hover {
+  cursor: pointer
 }
 
 .link-terkait {
@@ -537,21 +642,6 @@ object-position: center center; /* Pastikan tengah yang muncul */
   font-weight: bold;
   color: #00ff99;
 }
-
-
-/*hiasam*/
-fade-in {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
-
-.fade-in.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-
 
 /* Responsive untuk tablet */
 @media (max-width: 900px) {
