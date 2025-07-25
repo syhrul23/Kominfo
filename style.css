@@ -140,6 +140,7 @@ header {
 
 
 .overlay {
+  align-items: center;
   text-align: center;
   background: rgba(255,255,255,0.20);
   padding: 30px;
@@ -165,27 +166,29 @@ header {
 }
 
 .search-container {
-  position: absolute;  
+  position: relative;
   width: 100%;
+  max-width: 600px;
+  display: flex;
+  justify-content: center;
   align-items: center;
   margin-top: 20px;
-  left: 11%;
-  max-width: 600px;
 }
 
 .search-container i {
   position: absolute;
-  left: 29%;
+  left: 30%;
   top: 50%;
   transform: translateY(-50%);
-  color: #888;
-  font-size: 15px
+  color: #666;
+  font-size: 15px;
+ 
 }
 
 .search-container input {
   width: 100%;
-  padding: 10px 10px 10px 35px; /*padding kiri ditambah agar tidak nabrak icon */
-  border: 1px solid #ccc;
+  padding: 10px 10px 10px 35px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 50px;
   text-align: center;
   background-color: rgba(255, 255, 255, 0.5);
