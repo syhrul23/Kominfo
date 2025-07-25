@@ -265,12 +265,13 @@ object-position: center center; /* Pastikan tengah yang muncul */
   display: flex;
   gap: 20px;
   margin-bottom: 20px;
+  border-radius: 20px;
 }
 
 .card {
   background-color: white;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  border-radius: 6px;
+  border-radius: 20px;
   overflow: hidden;
   width: calc((100% / 3) - 13px);
 }
