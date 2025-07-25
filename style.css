@@ -472,6 +472,7 @@ object-position: center center; /* Pastikan tengah yang muncul */
   flex: 1;
   font-family: 'Montserat', sans-serif;
   align-items: center;
+  margin-top: 20px;
 }
 
 .banner-btn {
