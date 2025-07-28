@@ -18,7 +18,7 @@ body{
 }
 
 header {
-  background: linear-gradient(to right, rgba(18, 56, 171, 0.8) 15%, rgba(255, 255, 255, 0.7) 15%, rgba(255, 255, 255, 0.7) 100%);
+  background: linear-gradient(to right, rgb(63, 125, 154) 15%, rgba(255, 255, 255, 0.7) 15%, rgba(255, 255, 255, 0.7) 100%);
   padding: 8px 26px;
   position: fixed; /* Biar nempel atas */
   top: 0;
@@ -57,7 +57,7 @@ header {
   display: block;
   height: 4px;
   width: 100%;
-  background: #1238ab;
+  background: #3f7d9a;
   margin: 5px 0;
   border-radius: 2px;
   transition: 0.3s;
@@ -76,7 +76,7 @@ header {
 }
 
 .nav-menu a {
-  color: #1238ab;
+  color: #3f7d9a;
   text-decoration: none;
   margin-left: 40px;
   font-weight: bold;
@@ -84,7 +84,7 @@ header {
 }
 
 .nav-menu a:hover {
-  color: #ffcc00;;
+  color: #dd8c43;
 }
 
 /* Dropdown container */
@@ -95,7 +95,7 @@ header {
 
 /* Tombol utama */
 .dropdown-toggle {
-  color: #1238ab;
+  color: #3f7d9a;
   text-decoration: none;
   font-weight: bold;
   padding: 8px;
@@ -125,7 +125,7 @@ header {
 .dropdown-menu a {
   display: block;
   padding: 5px 10px;
-  color: #1238ab;
+  color: #3f7d9a;
   text-decoration: none;
   font-size: 14px;
   white-space: nowrap;
@@ -159,6 +159,63 @@ header {
   margin-top: 10px;
 }
 
+.floating-icon-bar {
+  position: fixed;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.tooltip-icon {
+  position: relative;
+  background-color: #65abc7;
+  width: 45px;
+  height: 45px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-decoration: none;
+  /* pastikan tidak menghidden child */
+  overflow: visible !important;
+  transition: width 0.3s ease;
+}
+
+.tooltip-icon i {
+  font-size: 20px;
+  z-index: 2;
+}
+
+.tooltip-text {
+  position: absolute;
+  white-space: nowrap;
+  right: 50px;
+  top: 50%;
+  transform: translateY(-50%) translateX(10px);
+  background-color: #65abc7;
+  color: white;
+  padding: 10px 14px;
+  border-radius: 12px;
+  font-size: 14px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 999;
+}
+
+.tooltip-icon:hover .tooltip-text {
+  opacity: 1;
+  transform: translateY(-50%) translateX(0);
+}
+
+.tooltip-icon:hover{
+  color:white;
+}
 .search-box {
   margin-top: 30px;
   border:none;
@@ -234,7 +291,7 @@ object-position: center center; /* Pastikan tengah yang muncul */
 }
 
 .berita-terbaru h2 {
-  color: #0033cc;
+  color: #3f7d9a;
   font-size: 28px;
   margin-bottom: 8px;
 }
@@ -256,7 +313,7 @@ object-position: center center; /* Pastikan tengah yang muncul */
 }
 
 .weekdays .active-date {
-  background-color: #3166ff;
+  background-color: #3f7d9a;
   color: #fff;
   font-weight: bold;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
@@ -293,7 +350,7 @@ object-position: center center; /* Pastikan tengah yang muncul */
 
 .btn-lihat {
   display: inline-block;
-  background: #0033cc;
+  background: #3f7d9a;
   color: white;
   padding: 10px 24px;
   border-radius: 24px;
@@ -338,7 +395,7 @@ object-position: center center; /* Pastikan tengah yang muncul */
   background: none;
   border: none;
   font-size: 16px;
-  color: #0033cc;
+  color: #3f7d9a;
   cursor: pointer;
 }
 
@@ -382,7 +439,7 @@ object-position: center center; /* Pastikan tengah yang muncul */
 }
 
 .btn-tdj {
-  background: #0033cc;
+  background: #3f7d9a;
   color: white;
   padding: 2px 8px;
   border-radius: 4px;
@@ -394,7 +451,7 @@ object-position: center center; /* Pastikan tengah yang muncul */
   display: block;
   text-align: center;
   font-size: 14px;
-  color: #0033cc;
+  color: #3f7d9a;
   text-decoration: none;
   margin-top: 8px;
   font-weight: bold;
@@ -406,7 +463,7 @@ object-position: center center; /* Pastikan tengah yang muncul */
 }
 
 .btn-lihat {
-  background-color: #1238ab;
+  background-color: #3f7d9a;
   color: white;
   padding: 9px 18px;
   border-radius: 25px;
@@ -472,7 +529,7 @@ object-position: center center; /* Pastikan tengah yang muncul */
 }
 
 .btn-lihat {
-  background-color: #1238ab;
+  background-color: #3f7d9a;
   color: white;
   padding: 10px 25px;
   border-radius: 20px;
@@ -485,82 +542,68 @@ object-position: center center; /* Pastikan tengah yang muncul */
   background-color: #0e2c8f;
 }
 
-.layanan {
-  background-color: #f7f4ef;
+.layanan-baru {
   text-align: center;
   padding: 60px 20px;
-  color: #333;
+  background-color: #fff;
 }
 
-.layanan h2 {
-  font-size: 28px;
+.layanan-baru h2 {
+  color: #336688;
+  font-size: 24px;
+  font-weight: bold;
   margin-bottom: 10px;
 }
 
-.layanan p {
-  font-size: 15px;
-  color: black;
-  max-width: 700px;
-  margin: 0 auto 40px;
+.layanan-baru p {
+  color: white;
+  font-size: 20px;
+  max-width: 600px;
+  margin: 0 0px 0px;
 }
 
-.layanan-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
+.layanan-grid-modern {
+  display: flex;
   justify-content: center;
-  padding: 0 20px;
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-.layanan-card {
-  background-color: #35a1ff;
-  border-radius: 15px;
-  box-shadow: 4px 6px 12px rgba(0,0,0,0.1);
-  padding: 12px 5px;
-  transition: transform 0.3s;
-}
-
-.layanan-card:hover {
-  transform: translateY(-6px);
-}
-
-.layanan-card{
-  font-size: 36px;
-  color: black;
-  margin-bottom: 15px;
-}
-
-.layanan-card-1{
-  background-color:#ffcc00;
-  border-radius: 15px;
-  box-shadow: 4px 6px 12px rgba(0,0,0,0.1);
-  padding: 12px 5px;
-  transition: transform 0.3s;
-}
-
-.layanan-card-1:hover {
-  transform: translateY(-6px);
-}
-
-.layanan-card-1{
-  font-size: 36px;
-  color: black;
-  margin-bottom: 15px;
-}
-
-
-.icon {
-  font-size: 36px;
+  flex-wrap: wrap;
+  gap: 30px;
+  flex-direction: row;
   align-items: center;
-  margin-bottom: 15px;
+  justify-content: center;
+  min-height: 100%;
 }
 
-.layanan-card p {
-  font-size: 15px;
-  font-weight: 500;
-  line-height: 1.5;
+.layanan-card-modern {
+  background-color: #3f7d9a;
+  color: white;
+  border-radius: 20px;
+  padding: 40px 20px;
+  width: 180px;
+  min-height: 240px;
+  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.2);
+  justify-content: space-between; 
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s;
+}
+
+.layanan-card-modern i {
+  font-size:  70px;
+  margin-bottom: 20px;
+}
+
+.layanan-card-modern:hover {
+  transform: translateY(-10px) scale(1.03);
+  background-color: #dd8c43;
+}
+
+
+.banner-bogor {
+  background-color: #dd8c43; /* Warna kuning khas Bogor */
+  padding: 20px 40px;
 }
 
 /* === Banner Pemerintah Kota Bogor === */
@@ -581,7 +624,7 @@ object-position: center center; /* Pastikan tengah yang muncul */
 }
 
 .banner-bogor {
-  background-color: #ffcc00; /* Warna kuning khas Bogor */
+  background-color: #dd8c43;; /* Warna kuning khas Bogor */
   padding: 20px 40px;
 }
 
@@ -601,7 +644,7 @@ object-position: center center; /* Pastikan tengah yang muncul */
 }
 
 .banner-bogor h1 {
-  color: #0033cc;
+  color: #ffffff;
   font-size: 45px;
   font-weight: 800;
   flex: 1;
@@ -611,7 +654,7 @@ object-position: center center; /* Pastikan tengah yang muncul */
 }
 
 .banner-btn {
-  background-color: #4d6aff;
+  background-color: #3f7d9a;
   color: white;
   border: none;
   border-radius: 12px;
@@ -658,12 +701,6 @@ object-position: center center; /* Pastikan tengah yang muncul */
   gap: 150px;
   margin-bottom: 60px;
 }
-.emoji-container {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 40px;
-}
 
 .logo-container img{
   height: 100px;
@@ -672,15 +709,7 @@ object-position: center center; /* Pastikan tengah yang muncul */
   justify-content: center;
 }
 
-.emoji-container img {
-  height: 70px;
-  object-fit: contain;
-  transition: transform 0.3s ease;
-  justify-content: center;
-}
-
-.logo-container img:hover,
-.emoji-container img:hover {
+.logo-container img:hover{
   transform: scale(1.1);
 }
 
@@ -804,33 +833,5 @@ object-position: center center; /* Pastikan tengah yang muncul */
   }
   .nav-toggle:checked + .nav-toggle-label + .nav-menu {
     display: flex;
-  }
-}
-/* Responsive untuk HP */
-@media (max-width: 767px) {
-  .navbar {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 8px;
-  }
-  .card {
-    width: 100%;
-    min-width: 0;
-  }
-  .card-container {
-    flex-direction: column;
-    gap: 10px;
-  }
-  .footer {
-    padding: 30px 5px 10px;
-  }
-  .footer-container {
-    flex-direction: column;
-    gap: 10px;
-    padding: 0 5px;
-  }
-  .logo-container img,
-  .emoji-container img {
-    height: 60px;
   }
 }
