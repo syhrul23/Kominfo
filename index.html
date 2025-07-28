@@ -1,837 +1,300 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Cairo",sans-serif;
-}
-
-body, html {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-body{
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-
-header {
-  background: linear-gradient(to right, rgb(63, 125, 154) 15%, rgba(255, 255, 255, 0.7) 15%, rgba(255, 255, 255, 0.7) 100%);
-  padding: 8px 26px;
-  position: fixed; /* Biar nempel atas */
-  top: 0;
-  width: 100%;
-  z-index: 999;
-  backdrop-filter: blur(4px); /* efek kaca */
-  -webkit-backdrop-filter: blur(4px);
-  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
-}
-
-.page-wrapper {
-  flex: 1; /* Biar footer tetap di bawah */
-}
-
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.nav-toggle {
-  display: none; /* Sembunyikan checkbox */
-}
-
-.nav-toggle-label span{
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-  width: 32px;
-  height: 32px;
-  justify-content: center;
-  margin-left: 16px;
-  z-index: 1001;
-}
-
-.nav-toggle-label span{
-  display: block;
-  height: 4px;
-  width: 100%;
-  background: #3f7d9a;
-  margin: 5px 0;
-  border-radius: 2px;
-  transition: 0.3s;
-}
-
-
-.logo img {
-  height: 30px;
-  width: auto;
-  margin: 0px;
-}
-
-.logo{
-  margin: 0px;
-  padding: 0px;
-}
-
-.nav-menu a {
-  color: #3f7d9a;
-  text-decoration: none;
-  margin-left: 40px;
-  font-weight: bold;
-  transition: color 0.3s ease;
-}
-
-.nav-menu a:hover {
-  color: #dd8c43;
-}
-
-/* Dropdown container */
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-/* Tombol utama */
-.dropdown-toggle {
-  color: #3f7d9a;
-  text-decoration: none;
-  font-weight: bold;
-  padding: 8px;
-  transition: 0.3s;
-}
-
-/* Dropdown menu tersembunyi awalnya */
-.dropdown-menu {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background: rgba(255,255,255,0.85); /* putih transparan */
-  box-shadow: 0 10px 18px rgba(0, 0, 0, 0.15);
-  border-radius: 30px;
-  padding: 10px 0;
-  z-index: 1000;
-  min-width: 160px;
-}
-
-/* Tampilkan menu saat hover */
-.dropdown:hover .dropdown-menu {
-  display: block;
-}
-
-/* Style link di dalam dropdown */
-.dropdown-menu a {
-  display: block;
-  padding: 5px 10px;
-  color: #3f7d9a;
-  text-decoration: none;
-  font-size: 14px;
-  white-space: nowrap;
-  align-items: center;
-  margin: 15px;
-}
-
-.dropdown-menu a:hover {
-  background-color: #f2f2f2;   
-  color: #FFBF00;
-}
-
-
-.overlay {
-  align-items: center;
-  text-align: center;
-  background: rgba(255,255,255,0.20);
-  padding: 30px;
-  text-wrap: nowrap;
-  border-radius: 10px;
-  color: white;
-}
-
-.overlay h1 {
-  font-size: 2rem;
-  font-weight: 700;
-}
-
-.overlay h2 {
-  font-size: 1.8rem;
-  margin-top: 10px;
-}
-
-.floating-icon-bar {
-  position: fixed;
-  top: 50%;
-  right: 10px;
-  transform: translateY(-50%);
-  z-index: 9999;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.tooltip-icon {
-  position: relative;
-  background-color: #65abc7;
-  width: 45px;
-  height: 45px;
-  border-radius: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  text-decoration: none;
-  /* pastikan tidak menghidden child */
-  overflow: visible !important;
-  transition: width 0.3s ease;
-}
-
-.tooltip-icon i {
-  font-size: 20px;
-  z-index: 2;
-}
-
-.tooltip-text {
-  position: absolute;
-  white-space: nowrap;
-  right: 50px;
-  top: 50%;
-  transform: translateY(-50%) translateX(10px);
-  background-color: #65abc7;
-  color: white;
-  padding: 10px 14px;
-  border-radius: 12px;
-  font-size: 14px;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s ease, transform 0.3s ease;
-  z-index: 999;
-}
-
-.tooltip-icon:hover .tooltip-text {
-  opacity: 1;
-  transform: translateY(-50%) translateX(0);
-}
-
-.tooltip-icon:hover{
-  color:white;
-}
-.search-box {
-  margin-top: 30px;
-  border:none;
-  align-items: center;
-}
-
-.search-container {
-  position: relative;
-  width: 100%;
-  max-width: 600px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 20px;
-}
-
-.search-container i {
-  position: absolute;
-  left: 30%;
-  top: 50%;
-  transform: translateY(-50%);
-  color: #666;
-  font-size: 15px;
- 
-}
-
-.search-container input {
-  width: 100%;
-  padding: 10px 10px 10px 35px;
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  border-radius: 50px;
-  text-align: center;
-  background-color: rgba(255, 255, 255, 0.5);
-}
- 
-.carousel-caption-layer {
-z-index: 10;
-text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
-padding: 20px;
-border-radius: 8px;
-}
-.carousel-inner {
-height: 100vh   /* Atur tinggi carousel */
-}
- 
-.carousel-inner .carousel-item {
-height: 100%; /* Carousel item ikuti tinggi parent */
-}
-
-.carousel-inner .carousel-item img {
-height: 100%;
-width: 100%;
-object-fit: cover;
-object-position: center center; /* Pastikan tengah yang muncul */
-}
-
-.berita-agenda-section {
-  display: flex;
-  justify-content: center;
-  padding: 40px 20px;
-  background-color: #faf9f5;
-}
-
-.container-inner {
-  display: flex;
-  max-width: 1200px;
-  width: 100%;
-  gap: 40px;
-}
-
-.berita-terbaru {
-  flex: 2;
-}
-
-.berita-terbaru h2 {
-  color: #3f7d9a;
-  font-size: 28px;
-  margin-bottom: 8px;
-}
-
-.berita-terbaru p {
-  color: #555;
-  margin-bottom: 20px;
-}
-
-.weekdays li {
-  display: inline-block;
-  padding: 6px 10px;
-  margin: 4px;
-  border-radius: 10px;
-  cursor: pointer;
-  text-align: center;
-  font-weight: 500;
-  transition: background-color 0.3s, color 0.3s;
-}
-
-.weekdays .active-date {
-  background-color: #3f7d9a;
-  color: #fff;
-  font-weight: bold;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
-}
-
-
-
-.card-container {
-  display: flex;
-  gap: 20px;
-  margin-bottom: 20px;
-  border-radius: 20px;
-}
-
-.card {
-  background-color: white;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  border-radius: 20px;
-  overflow: hidden;
-  width: calc((100% / 3) - 13px);
-}
-
-.card img {
-  display: block;
-  width: 100%;
-}
-
-.card-caption {
-  padding: 12px;
-  font-size: 14px;
-  font-weight: bold;
-  text-align: center;
-}
-
-.btn-lihat {
-  display: inline-block;
-  background: #3f7d9a;
-  color: white;
-  padding: 10px 24px;
-  border-radius: 24px;
-  text-decoration: none;
-  font-size: 14px;
-}
-
-.agenda-widget {
-  flex: 1;
-  background-color: white;
-  border-radius: 8px;
-  padding: 20px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-  max-width: 320px;
-}
-
-.agenda-widget h3 {
-  font-size: 18px;
-  font-weight: bold;
-  margin-bottom: 8px;
-}
-
-.agenda-widget p {
-  font-size: 14px;
-  color: #555;
-  margin-bottom: 16px;
-}
-
-.calendar-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 10px;
-}
-
-.calendar-header .month {
-  font-weight: bold;
-  color: #0033cc;
-}
-
-.calendar-header button {
-  background: none;
-  border: none;
-  font-size: 16px;
-  color: #3f7d9a;
-  cursor: pointer;
-}
-
-.weekdays {
-  list-style: none;
-  display: flex;
-  justify-content: space-between;
-  font-size: 12px;
-  margin-bottom: 12px;
-  padding: 0;
-}
-
-.weekdays li {
-  text-align: center;
-  flex: 1;
-}
-
-.agenda-item {
-  border: 1px solid #cce;
-  border-radius: 6px;
-  padding: 12px;
-  margin-bottom: 16px;
-}
-
-.agenda-title {
-  font-size: 14px;
-  font-weight: bold;
-  margin-bottom: 4px;
-}
-
-.agenda-time {
-  font-size: 12px;
-  color: #555;
-  margin-bottom: 4px;
-}
-
-.agenda-type {
-  display: flex;
-  justify-content: space-between;
-  font-size: 12px;
-}
-
-.btn-tdj {
-  background: #3f7d9a;
-  color: white;
-  padding: 2px 8px;
-  border-radius: 4px;
-  font-size: 12px;
-  text-decoration: none;
-}
-
-.link-more {
-  display: block;
-  text-align: center;
-  font-size: 14px;
-  color: #3f7d9a;
-  text-decoration: none;
-  margin-top: 8px;
-  font-weight: bold;
-}
-
-
-.btn-wrapper {
-  margin-top: 40px;
-}
-
-.btn-lihat {
-  background-color: #3f7d9a;
-  color: white;
-  padding: 9px 18px;
-  border-radius: 25px;
-  text-decoration: none;
-  font-weight: normal;
-  transition: background-color 0.3s;
-  font-size: 10px;
-}
-
-.btn-lihat:hover {
-  background-color: #0e2c8f;
-}
-
-.pejabat {
-  text-align: center;
-  padding: 60px 20px;
-  background-color: #ffffff;
-  color: #333;
-}
-
-.pejabat h2 {
-  font-size: 28px;
-  margin-bottom: 10px;
-}
-
-.pejabat p {
-  font-size: 15px;
-  color: #666;
-  margin-bottom: 40px;
-}
-
-.pejabat-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 25px;
-}
-
-.pejabat-card {
-  width: 160px;
-  height: 260px;
-  background-color: #fff;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  border-radius: 6px;
-  overflow: hidden;
-  transition: transform 0.3s;
-}
-
-.pejabat-card:hover {
-  transform: translateY(-5px);
-}
-
-.pejabat-card img {
-  width: 100%;
-  height: 60%;
-  object-fit: cover;
-  display: block;
-}
-
-/* Tombol */
-.btn-wrapper {
-  margin-top: 40px;
-}
-
-.btn-lihat {
-  background-color: #3f7d9a;
-  color: white;
-  padding: 10px 25px;
-  border-radius: 20px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: background-color 0.3s;
-}
-
-.btn-lihat:hover {
-  background-color: #0e2c8f;
-}
-
-.layanan-baru {
-  text-align: center;
-  padding: 60px 20px;
-  background-color: #fff;
-}
-
-.layanan-baru h2 {
-  color: #336688;
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-.layanan-baru p {
-  color: white;
-  font-size: 20px;
-  max-width: 600px;
-  margin: 0 0px 0px;
-}
-
-.layanan-grid-modern {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 30px;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  min-height: 100%;
-}
-
-.layanan-card-modern {
-  background-color: #3f7d9a;
-  color: white;
-  border-radius: 20px;
-  padding: 40px 20px;
-  width: 180px;
-  min-height: 240px;
-  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.2);
-  justify-content: space-between; 
-  font-weight: bold;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  transition: transform 0.3s;
-}
-
-.layanan-card-modern i {
-  font-size:  70px;
-  margin-bottom: 20px;
-}
-
-.layanan-card-modern:hover {
-  transform: translateY(-10px) scale(1.03);
-  background-color: #dd8c43;
-}
-
-
-.banner-bogor {
-  background-color: #dd8c43; /* Warna kuning khas Bogor */
-  padding: 20px 40px;
-}
-
-/* === Banner Pemerintah Kota Bogor === */
-.banner-bogor {
-  background-color: #ffcc00;
-  padding: 20px 0;
-  width: 100%;
-  height: 200px;
-}
-
-.banner-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 30px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.banner-bogor {
-  background-color: #dd8c43;; /* Warna kuning khas Bogor */
-  padding: 20px 40px;
-}
-
-.banner-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-}
-
-.logo-bogor {
-  width: 150px;
-  height: auto;
-  margin-top: 15px;
-  margin-left: 15%; 
-
-}
-
-.banner-bogor h1 {
-  color: #ffffff;
-  font-size: 45px;
-  font-weight: 800;
-  flex: 1;
-  font-family: 'Montserat', sans-serif;
-  align-items: center;
-  margin-top: 20px;
-}
-
-.banner-btn {
-  background-color: #3f7d9a;
-  color: white;
-  border: none;
-  border-radius: 12px;
-  width: 100px;
-  height: 35px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  font-weight: bold;
-  transition: 0.3s ease;
-}
-
-.banner-btn i {
-  margin-left: 6px;
-}
-
-.banner-btn:hover {
-  cursor: pointer
-}
-
-.link-terkait {
-  background-color: #ebebec;
-  text-align: center;
-  padding: 60px 20px;
-}
-
-.link-terkait h2 {
-  font-size: 26px;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-.link-terkait p {
-  font-size: 15px;
-  color: #555;
-  margin-bottom: 40px;
-}
-
-.logo-container{
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 150px;
-  margin-bottom: 60px;
-}
-
-.logo-container img{
-  height: 100px;
-  object-fit: contain;
-  transition: transform 0.3s ease;
-  justify-content: center;
-}
-
-.logo-container img:hover{
-  transform: scale(1.1);
-}
-
-.link-terkait h3 {
-  font-size: 20px;
-  margin-bottom: 20px;
-}
-
-.footer {
-  background-color: #1e1d2b;
-  color: #ffffff;
-  padding: 60px 20px 20px;
-  font-family: 'Cairo', sans-serif;
-  width:100vw;
-  margin: 0;
-  box-sizing: border-box;
-  position: relative;
-}
-
-.footer-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 30px;
-  max-width:1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-  width: 100%;
-  box-sizing: border-box; /* Pastikan footer mengisi lebar penuh */
-}
-
-.footer-map img {
-  width: 100%;
-  max-width: 300px;
-  border-radius: 6px;
-}
-
-.footer-kontak,
-.footer-statistik {
-  flex: 1;
-  min-width: 250px;
-}
-
-.footer-kontak h4,
-.footer-statistik h4 {
-  font-size: 18px;
-  margin-bottom: 15px;
-  border-bottom: 2px solid #888;
-  display: inline-block;
-  padding-bottom: 5px;
-}
-
-.footer-kontak p {
-  font-size: 14px;
-  line-height: 1.6;
-  color: #cccccc;
-}
-
-.sosmed {
-  margin-top: 15px;
-}
-
-.sosmed a img {
-  width: 28px;
-  height: 28px;
-  margin-right: 10px;
-  transition: transform 0.3s;
-}
-
-.sosmed a:hover img {
-  transform: scale(1.2);
-}
-
-.logo-x {
-  position: relative;  /* atau absolute jika ingin benar-benar mengambang */
-  z-index: 9999;
-  height: 10px;        
-}
-
-
-.footer-statistik ul {
-  list-style: none;
-  padding: 0;
-  font-size: 14px;
-}
-
-.footer-statistik ul li {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 8px;
-  color: #dddddd;
-}
-
-.footer-statistik span {
-  font-weight: bold;
-  color: #00ff99;
-}
-
-/* Responsive untuk tablet */
-@media (max-width: 900px) {
-  .nav-toggle-label {
-    display: flex;
-  }
-  .nav-menu {
-    position: absolute;
-    top: 60px;
-    right: 26px;
-    background: rgba(255,255,255,0.97);
-    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
-    flex-direction: column;
-    align-items: flex-start;
-    width: 200px;
-    padding: 20px 0;
-    gap: 0;
-    display: none;
-    z-index: 1000;
-  }
-  .nav-menu a {
-    margin: 10px 20px;
-    width: 100%;
-  }
-  .nav-toggle:checked + .nav-toggle-label + .nav-menu {
-    display: flex;
-  }
-}
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Diskominfo Kota Bogor</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="page-wrapper">
+      <header>
+        <div class="navbar">
+          <div class="logo">
+            <img src="logo kominfo.png" alt="Diskominfo Kota Bogor">
+      </div>
+      <nav class="nav-menu">
+        <a href="#">Beranda</a>
+  
+        <div class="dropdown">
+          <a href="#" class="dropdown-toggle">Profil</a>  
+          <div class="dropdown-menu">                          
+            <a href="visimisi.html">Visi Misi</a>
+            <a href="sejarah.html">Sejarah</a>
+            <a href="pegawai.html">Data Pegawai</a>
+            <a href="#">Struktural</a>
+          </div>
+        </div>
+        
+  <div class="dropdown">
+          <a href="#" class="dropdown-toggle">Publikasi</a>  
+          <div class="dropdown-menu">                          
+            <a href="#">Galeri</a>
+            <a href="#">Berita</a>
+          </div>
+        </div>
+        <a href="#">Dokumen</a>
+        <a href="#">Kontak</a>
+      </nav>
+      </div>
+    </div>
+  </header>
+    <!-- Konten utama halaman -->
+  <!-- Carousel -->
+  <main>
+  <div class="floating-icon-bar">
+  <a href="#" class="tooltip-icon">
+    <i class="fas fa-smile"></i>
+    <span class="tooltip-text">Beri Penilaian</span>
+  </a>
+  <a href="#" class="tooltip-icon">
+    <i class="fas fa-bullhorn"></i>
+    <span class="tooltip-text">Aspirasi</span>
+  </a>
+  <a href="#" class="tooltip-icon">
+    <i class="fas fa-child"></i>
+    <span class="tooltip-text">Statistik</span>
+  </a>
+  <a href="#" class="tooltip-icon">
+    <i class="fas fa-stopwatch"></i>
+    <span class="tooltip-text">Monitoring</span>
+  </a>
+</div>
+    <div id="carouselExampleIndicators" class="carousel slide position-relative" data-bs-ride="carousel">
+        <div class="carousel-caption-layer position-absolute top-50 start-50 translate-middle text-center"> 
+     <section class="hero">
+    <div class="overlay">
+      <h1 id="typing-text">DINAS KOMUNIKASI DAN INFORMATIKA</h1>
+      <h2>KOTA BOGOR</h2>
+    </div>
+  </section>
+   <div class="search-container">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="text" placeholder="Apa yang sedang anda cari?....">
+</div>
+        </div>
+
+        <!-- Indikator --> 
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></button>
+        </div>
+
+        <!-- Gambar Carousel -->
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="Quality Restoration-AI UHD-alun_alun_kota_bogor_uhd.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="bg2.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="bg3.png" class="d-block w-100" alt="...">
+            </div>
+        </div>
+
+        <!-- Navigasi -->
+        <!-- <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+            <span class="visually-hidden">Next</span>
+        </button> -->
+    </div>
+ <!-- Layanan -->
+  <section class="layanan-baru">
+  <h2>APA LAYANAN YANG KAMI MILIKI?</h2>
+  <p>Sejumlah komponen dan resource yang diterapkan untuk memenuhi kebutuhan instansi pemerintahan Kota Bogor</p>
+
+  <div class="layanan-grid-modern">
+    <div class="layanan-card-modern">
+      <i class="fas fa-file-signature"></i>
+      <p>Pengajuan TTE</p>
+    </div>
+    <div class="layanan-card-modern">
+      <i class="fas fa-comments"></i>
+      <p>Chat Bogor<br>Citizen Support</p>
+    </div>
+    <div class="layanan-card-modern">
+      <i class="fas fa-envelope"></i>
+      <p>Pembuatan<br>Email Dinas</p>
+    </div>
+    <div class="layanan-card-modern">
+      <i class="fas fa-database"></i>
+      <p>PPID</p>
+    </div>
+  </div>
+
+  <div class="btn-wrapper">
+    <a href="struktur.html" class="btn-lihat">LAYANAN SELENGKAPNYA</a>
+  </div>
+</section>
+
+<!-- Layanan -->
+ <!-- Banner Bogor -->
+ <section class="banner-bogor">
+  <div class="banner-container">
+    <img src="logo bogor gede.png" alt="Logo Bogor" class="logo-bogor">
+    <h1>Pemerintah Kota Bogor</h1>
+    <a href="#" class="banner-btn">buka <i class="fa-solid fa-arrow-right"></i></a>
+  </div>
+</section>
+<!-- Banner Bogor -->
+ <!-- Berita -->
+    <section class="berita-agenda-section">
+  <div class="container-inner">
+    <div class="berita-terbaru">
+      <h2>BERITA TERBARU</h2>
+      <p>Berita atau artikel terbaru dari Dinas Komunikasi dan Informatika Kota Bogor</p>
+      <div class="card-container">
+        <div class="card">
+          <img src="ipb.jpeg" alt="">
+          <div class="card-caption">Pembukaan Passion X Fesma 2025 “A Voyage Through the Echoes of Sweet’s Life”</div>
+        </div>
+        <div class="card">
+          <img src="berita komisi 3.jpeg" alt="">
+          <div class="card-caption">KOMISI III DPRD KOTA BOGOR KUNJUNGI DISKOMINFO KOTA BOGOR</div>
+        </div>
+        <div class="card">
+          <img src="bansos.webp" alt="">
+          <div class="card-caption">Bansos Juli 2025 Dimulai! Buruan Cek Rekening dan Undangan Beras 20 Kg dari RT dan RW</div>
+        </div>
+      </div>
+      <div class="btn-wrapper">
+        <a href="#" class="btn-lihat">BERITA SELENGKAPNYA</a>
+      </div>
+    </div>
+
+    <aside class="agenda-widget">
+      <h3>Agenda Jawa Barat</h3>
+      <p>Dapatkan informasi terkait semua kegiatan yang dilakukan di Diskominfo</p>
+      <div class="calendar-header">
+        <button class="prev">&lt;</button>
+        <span class="month">Juli 2025</span>
+        <button class="next">&gt;</button>
+      </div>
+   <ul class="weekdays">
+  <li data-day="24">Sen<br>24</li>
+  <li data-day="25" class="active-date">Sel<br>25</li>
+  <li data-day="26">Rab<br>26</li>
+  <li data-day="27">Kam<br>27</li>
+  <li data-day="28">Jum<br>28</li>
+</ul>
+      <div class="agenda-item">
+        <div class="agenda-title">Sosialisasi kepada masyarakat daerah j...</div>
+        <div class="agenda-time">08:00 – 12:00 WIB</div>
+        <div class="agenda-type">Agenda Offline | Pimpinan <span class="btn-tdj">Terjadwal</span></div>
+      </div>
+      <a href="#" class="link-more">Lihat Agenda Lainnya</a>
+    </aside>
+  </div>
+</section>
+<!-- Berita -->
+
+<!-- Pejabat -->
+ <section class="pejabat">
+  <h2>Pejabat Diskominfo</h2>
+  <p>Struktur Organisasi Dinas Komuikasi Dan Informatika Kota Bogor</p>
+
+  <div class="pejabat-container">
+    <div class="pejabat-card">
+      <img src="profil wa.jpg" alt="Pejabat 1">
+    </div>
+    <div class="pejabat-card">
+      <img src="profil wa.jpg" alt="Pejabat 2">
+    </div>
+    <div class="pejabat-card">
+      <img src="profil wa.jpg" alt="Pejabat 3">
+    </div>
+    <div class="pejabat-card">
+      <img src="profil wa.jpg" alt="Pejabat 4">
+    </div>
+    <div class="pejabat-card">
+      <img src="profil wa.jpg" alt="Pejabat 5">
+    </div>
+  </div>
+
+  <div class="btn-wrapper">
+    <a href="pegawai.html" class="btn-lihat">STRUKTUR SELENGKAPNYA</a>
+  </div>
+</section>
+ <!-- Pejabat-->
+
+ <!-- banner-->
+  <section class="link-terkait">
+  <h2>BANNER LINK TERKAIT</h2>
+  <p>Situs yang terkait dengan Dinas Komunikasi dan Informatika, Kota Bogor</p>
+
+  <div class="logo-container">
+    <a href="https://bpbd.kotabogor.go.id/" target="_blank" rel="noopener">
+      <img src="bpbd.png" alt="BPBD Kota Bogor">
+    </a>
+    <a href="https://bsw.kotabogor.go.id/" target="_blank" rel="noopener">
+      <img src="unnamed-removebg-preview.png" alt="Bogor Single Window">
+    </a>
+    <a href="https://kotabogor.go.id/" target="_blank" rel="noopener">
+      <img src="kota bogor.png" alt="Kota Bogor">
+    </a>
+    <a href="https://perkawis.kotabogor.go.id/" target="_blank" rel="noopener">
+      <img src="bogor perkawis.png" alt="Kominfo Logo">
+    </a>
+  </div>
+<!--banner-->
+</div>
+</div>
+</main>
+<!-- Footer -->
+ <footer class="footer">
+  <div class="footer-container">
+   <div class="footer-map">
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.4161454299747!2d106.79109007413658!3d-6.595089664468269!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69c5b7d2e12d0d%3A0x9b59e38fc692d9fe!2sKantor%20Kominfo%20Kota%20Bogor!5e0!3m2!1sen!2sid!4v1752851198269!5m2!1sen!2sid"width="300"
+    height="200"
+    style="border:0;"
+    allowfullscreen=""
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade">
+  </iframe>
+</div>
+
+    <div class="footer-kontak">
+      <h4>Kontak Kami</h4>
+       <p> Jl. Ir. H. Juanda No.10, RT.01/RW.01, Pabaton,<br>
+    Kecamatan Bogor Tengah, Kota Bogor, Jawa Barat 16121<br><br>
+    Telp: <a href="tel:+622518321075">+62251-8321075 Ext. 287</a><br>
+    e-mail Admin Web: <a href="mailto:kominfo@kotabogor.go.id" target="_blank">kominfo@kotabogor.go.id</a>
+  </p>
+      <div class="sosmed">
+  <a href="https://www.facebook.com/kominfokotabogor" target="_blank" rel="noopener"><img src="fb.png" alt="Facebook"></a>
+  <a href="https://www.instagram.com/kominfobogor?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener"><img src="instagram.png" alt="Instagram"></a>
+  <a href="https://youtube.com/@kominfokotabogor2892?si=DYzwmdH5Fa8aDNeZ" target="_blank" rel="noopener"><img src="youtube.png" alt="YouTube"></a>
+  <a href="https://x.com/kominfobogor" target="_blank" rel="noopener"><img src="twitter.png" class="logo-x" alt="Twitter/X"></a>
+</div>
+    </div>
+    <div class="footer-statistik">
+      <h4>Statistik Pengunjung</h4>
+      <ul>
+        <li>➡️ Hari ini <span>123</span></li>
+        <li>➡️ Kemarin <span>12345</span></li>
+        <li>➡️ Bulan ini <span>1234567</span></li>
+        <li>➡️ Tahun ini <span>12345678</span></li>
+        <li>➡️ Semua Waktu <span>123456789</span></li>
+      </ul>
+    </div>
+    </div>
+</footer>
+<!-- Footer -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <script src="scripts.js"></script>
+</body>
+</html>
