@@ -65,7 +65,7 @@ header {
 
 
 .logo img {
-  height: 30px;
+  height: 35px;
   width: auto;
   margin: 0px;
 }
@@ -162,7 +162,7 @@ header {
 .floating-icon-bar {
   position: fixed;
   top: 50%;
-  right: 10px;
+  right: 20px;
   transform: translateY(-50%);
   z-index: 9999;
   display: flex;
@@ -180,7 +180,7 @@ header {
   align-items: center;
   justify-content: center;
   color: white;
-  text-decoration: none;
+  text-decoration: none;  
   /* pastikan tidak menghidden child */
   overflow: visible !important;
   transition: width 0.3s ease;
@@ -216,6 +216,103 @@ header {
 .tooltip-icon:hover{
   color:white;
 }
+
+modal {
+  display: none; /* Awalnya disembunyikan */
+  position: fixed; /* Tetap di posisi yang sama bahkan saat di-scroll */
+  z-index: 1000; /* Tampil di atas segalanya */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto; /* Bisa di-scroll jika kontennya panjang */
+  background-color: rgba(0, 0, 0, 0.6); /* Warna hitam semi-transparan */
+}
+
+/* Kotak konten modal itu sendiri */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto; /* 5% dari atas dan otomatis rata tengah */
+  padding: 25px;
+  border: 1px solid #888;
+  width: 90%;
+  max-width: 600px; /* Lebar maksimal */
+  border-radius: 10px;
+  position: relative;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  animation: slide-down 0.5s;
+}
+
+@keyframes slide-down {
+  from {transform: translateY(-50px); opacity: 0;}
+  to {transform: translateY(0); opacity: 1;}
+}
+
+
+/* Tombol Close (X) di pojok kanan atas */
+.close-button {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Styling untuk form di dalam modal */
+.modal-content .form-group {
+  margin-bottom: 15px;
+}
+
+.modal-content label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.modal-content textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.modal-content .emoji-rating span {
+  font-size: 2.5rem;
+  margin-right: 15px;
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.modal-content .emoji-rating span:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.modal-footer {
+  text-align: right;
+  margin-top: 20px;
+}
+/* Anda bisa sesuaikan style tombol ini dengan style website Anda */
+.btn-tutup, .btn-kirim {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.btn-tutup {
+    background-color: #ccc;
+}
+.btn-kirim {
+    background-color: #4CAF50; /* Warna hijau */
+    color: white;
+}
+
 .search-box {
   margin-top: 30px;
   border:none;
@@ -474,7 +571,7 @@ object-position: center center; /* Pastikan tengah yang muncul */
 }
 
 .btn-lihat:hover {
-  background-color: #0e2c8f;
+  color: #FFFFFF;
 }
 
 .pejabat {
@@ -539,7 +636,7 @@ object-position: center center; /* Pastikan tengah yang muncul */
 }
 
 .btn-lihat:hover {
-  background-color: #0e2c8f;
+  background-color: #dd8c43;
 }
 
 .layanan-baru {
@@ -665,15 +762,17 @@ object-position: center center; /* Pastikan tengah yang muncul */
   justify-content: center;
   text-decoration: none;
   font-weight: bold;
-  transition: 0.3s ease;
+  transition: transform 0.3s;
 }
 
 .banner-btn i {
   margin-left: 6px;
+  transition: transform 0.3s;
 }
 
 .banner-btn:hover {
   cursor: pointer;
+  color: #ffffff;
 }
 
 .link-terkait {
