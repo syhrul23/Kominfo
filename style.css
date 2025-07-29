@@ -1110,7 +1110,7 @@ object-position: center center; /* Pastikan tengah yang muncul */
   }
 
   .carousel-inner, .carousel-inner .carousel-item {
-     height: 65vh; /* Misalnya 65% dari tinggi layar */
+     height: 100vh; /* Misalnya 65% dari tinggi layar */
   }
 
   /* --- GAMBAR BARU UNTUK TAMPILAN HP --- */
