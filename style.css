@@ -846,7 +846,7 @@ object-position: center center; /* Pastikan tengah yang muncul */
   color: #ffffff;
   padding: 60px 20px 20px;
   font-family: 'Cairo', sans-serif;
-  width:100vw;
+  width:100%;
   margin: 0;
   box-sizing: border-box;
   position: relative;
