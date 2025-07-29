@@ -388,7 +388,7 @@ object-position: center center; /* Pastikan tengah yang muncul */
 
 .calendar-header .month {
   font-weight: bold;
-  color: #0033cc;
+  color: #3f7d9a;
 }
 
 .calendar-header button {
@@ -673,7 +673,7 @@ object-position: center center; /* Pastikan tengah yang muncul */
 }
 
 .banner-btn:hover {
-  cursor: pointer
+  cursor: pointer;
 }
 
 .link-terkait {
@@ -806,6 +806,11 @@ object-position: center center; /* Pastikan tengah yang muncul */
 .footer-statistik span {
   font-weight: bold;
   color: #00ff99;
+}
+
+/* Menyembunyikan tombol aksesibilitas bawaan dari widget */
+.asw-menu-btn {
+  display: none !important;
 }
 
 /* Responsive untuk tablet */
