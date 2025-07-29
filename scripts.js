@@ -42,9 +42,49 @@ document.addEventListener('DOMContentLoaded', function() {
         console.error("Custom accessibility button with ID 'openAccessibilityMenuButton' not found in the HTML. Please ensure the ID is correct.");
     }
 
-    // --- Anda bisa menambahkan atau mempertahankan kode JavaScript lain di sini ---
-    // Misalnya, untuk Carousel, typing effect, atau fungsi dropdown menu Anda.
-    // Pastikan kode-kode ini juga berada di dalam atau setelah DOMContentLoaded jika mereka memanipulasi DOM.
 });
 
-// --- AKHIR BAGIAN scripts.js ANDA ---
+// Tunggu hingga seluruh halaman dimuat
+document.addEventListener('DOMContentLoaded', function() {
+
+    // --- KODE MODAL PENILAIAN ---
+
+    // Ambil elemen-elemen yang dibutuhkan
+    const modalPenilaian = document.getElementById('modalPenilaian');
+    const tombolBuka = document.getElementById('tombolBeriPenilaian');
+    const tombolTutupSpan = document.querySelector('.close-button');
+    const tombolTutupBtn = document.getElementById('tombolTutupModal');
+
+    // Fungsi untuk menampilkan modal
+    function bukaModal() {
+        modalPenilaian.style.display = 'block';
+    }
+
+    // Fungsi untuk menyembunyikan modal
+    function tutupModal() {
+        modalPenilaian.style.display = 'none';
+    }
+
+    // Ketika ikon "Beri Penilaian" diklik, panggil fungsi bukaModal
+    tombolBuka.addEventListener('click', function(event) {
+        event.preventDefault(); // Mencegah link # melompat ke atas
+        bukaModal();
+    });
+
+    // Ketika tombol (X) diklik, panggil fungsi tutupModal
+    tombolTutupSpan.addEventListener('click', tutupModal);
+
+    // Ketika tombol "Tutup" diklik, panggil fungsi tutupModal
+    tombolTutupBtn.addEventListener('click', tutupModal);
+
+    // Ketika pengguna mengklik di luar area modal (di latar belakang gelap), tutup juga modalnya
+    window.addEventListener('click', function(event) {
+        if (event.target == modalPenilaian) {
+            tutupModal();
+        }
+    });
+
+    // --- AKHIR KODE MODAL PENILAIAN ---
+    
+    // (Kode JavaScript Anda yang lain bisa tetap di sini)
+});
