@@ -18,7 +18,7 @@ body{
 }
 
 header {
-  background: linear-gradient(to right, rgba(18, 56, 171, 0.8) 15%, rgba(255, 255, 255, 0.7) 15%, rgba(255, 255, 255, 0.7) 100%);
+  background: linear-gradient(to right, rgb(63, 125, 154) 15%, rgba(255, 255, 255, 0.7) 15%, rgba(255, 255, 255, 0.7) 100%);
   padding: 8px 26px;
   position: fixed; /* Biar nempel atas */
   top: 0;
@@ -57,7 +57,7 @@ header {
   display: block;
   height: 4px;
   width: 100%;
-  background: #1238ab;
+  background: #3f7d9a;
   margin: 5px 0;
   border-radius: 2px;
   transition: 0.3s;
@@ -65,7 +65,7 @@ header {
 
 
 .logo img {
-  height: 30px;
+  height: 35px;
   width: auto;
   margin: 0px;
 }
@@ -76,7 +76,7 @@ header {
 }
 
 .nav-menu a {
-  color: #1238ab;
+  color: #3f7d9a;
   text-decoration: none;
   margin-left: 40px;
   font-weight: bold;
@@ -84,7 +84,7 @@ header {
 }
 
 .nav-menu a:hover {
-  color: #FFBF00;
+  color: #dd8c43;
 }
 
 /* Dropdown container */
@@ -95,7 +95,7 @@ header {
 
 /* Tombol utama */
 .dropdown-toggle {
-  color: #1238ab;
+  color: #3f7d9a;
   text-decoration: none;
   font-weight: bold;
   padding: 8px;
@@ -109,12 +109,11 @@ header {
   top: 100%;
   left: 0;
   background: rgba(255,255,255,0.85); /* putih transparan */
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 10px 18px rgba(0, 0, 0, 0.15);
   border-radius: 30px;
   padding: 10px 0;
   z-index: 1000;
   min-width: 160px;
-
 }
 
 /* Tampilkan menu saat hover */
@@ -126,35 +125,244 @@ header {
 .dropdown-menu a {
   display: block;
   padding: 5px 10px;
-  color: #1238ab;
+  color: #3f7d9a;
   text-decoration: none;
   font-size: 14px;
   white-space: nowrap;
   align-items: center;
+  margin: 15px;
 }
 
 .dropdown-menu a:hover {
-  background-color: #f2f2f2;
+  background-color: #f2f2f2;   
   color: #FFBF00;
 }
 
-.hero-publikasi {
-  background-image: url('bg_header.png'); /* ← ganti dengan gambar asli kamu */
+
+.overlay {
+  align-items: center;
+  text-align: center;
+  background: rgba(255,255,255,0.20);
+  padding: 30px;
+  text-wrap: nowrap;
+  border-radius: 10px;
+  color: white;
+}
+
+.overlay h1 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.overlay h2 {
+  font-size: 1.8rem;
+  margin-top: 10px;
+}
+
+.floating-icon-bar {
+  position: fixed;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.tooltip-icon {
+  position: relative;
+  background-color: #65abc7;
+  width: 45px;
+  height: 45px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-decoration: none;  
+  /* pastikan tidak menghidden child */
+  overflow: visible !important;
+  transition: width 0.3s ease;
+}
+
+.tooltip-icon i {
+  font-size: 20px;
+  z-index: 2;
+}
+
+.tooltip-text {
+  position: absolute;
+  white-space: nowrap;
+  right: 50px;
+  top: 50%;
+  transform: translateY(-50%) translateX(10px);
+  background-color: #65abc7;
+  color: white;
+  padding: 10px 14px;
+  border-radius: 12px;
+  font-size: 14px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 999;
+}
+
+.tooltip-icon:hover .tooltip-text {
+  opacity: 1;
+  transform: translateY(-50%) translateX(0);
+}
+
+.tooltip-icon:hover{
+  color:white;
+}
+
+modal {
+  display: none; /* Awalnya disembunyikan */
+  position: fixed; /* Tetap di posisi yang sama bahkan saat di-scroll */
+  z-index: 1000; /* Tampil di atas segalanya */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto; /* Bisa di-scroll jika kontennya panjang */
+  background-color: rgba(0, 0, 0, 0.6); /* Warna hitam semi-transparan */
+}
+
+/* Kotak konten modal itu sendiri */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto; /* 5% dari atas dan otomatis rata tengah */
+  padding: 25px;
+  border: 1px solid #888;
+  width: 90%;
+  max-width: 600px; /* Lebar maksimal */
+  border-radius: 10px;
+  position: relative;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  animation: slide-down 0.5s;
+}
+
+@keyframes slide-down {
+  from {transform: translateY(-50px); opacity: 0;}
+  to {transform: translateY(0); opacity: 1;}
+}
+
+
+/* Tombol Close (X) di pojok kanan atas */
+.close-button {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Styling untuk form di dalam modal */
+.modal-content .form-group {
+  margin-bottom: 15px;
+}
+
+.modal-content label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.modal-content textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.modal-content .emoji-rating span {
+  font-size: 2.5rem;
+  margin-right: 15px;
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.modal-content .emoji-rating span:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.modal-footer {
+  text-align: right;
+  margin-top: 20px;
+}
+/* Anda bisa sesuaikan style tombol ini dengan style website Anda */
+.btn-tutup, .btn-kirim {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.btn-tutup {
+    background-color: #ccc;
+}
+.btn-kirim {
+    background-color: #4CAF50; 
+    color: white;
+}
+
+.hero-judul {
+  position: relative;
+  background-image: url('logo_header_kecil.png');
   background-size: cover;
   background-position: center;
-  height: 200px;
-  position: relative;
+  height: auto;
+  margin-top: 60px; 
 }
 
 .hero-overlay {
   position: absolute;
-  top: 70%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: #222;
-  font-size: 36px;
-  font-weight: 900;
-  text-align: center;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,40,0.4); 
+  z-index: 1;
+}
+
+.hero-inner {
+  position: relative;
+  z-index: 2;
+  color: white;
+  text-align: left;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.breadcrumb {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.breadcrumb a {
+  color: #f5f5f5;
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  color: #ffcc00;
+}
+
+.breadcrumb .active {
+  color: #ffcc00;
+  font-weight: bold;
+}
+
+.hero-inner h1 {
+  font-size: 40px;
+  font-weight: 700;
+  margin-top: 20px;
 }
 
 .struktur-container {
@@ -228,7 +436,7 @@ header {
   color: #ffffff;
   padding: 60px 20px 20px;
   font-family: 'Cairo', sans-serif;
-  width:100vw;
+  width:100%;
   margin: 0;
   box-sizing: border-box;
   position: relative;
@@ -306,4 +514,60 @@ header {
   justify-content: space-between;
   margin-bottom: 8px;
   color: #dddddd;
+}
+
+.asw-menu-btn {
+  display: none !important;
+}
+
+@media(max-width: 768px) {
+    /* Header & Navigasi */
+    header #branding,
+    header nav,
+    header nav ul,
+    header nav li {
+        float: none;
+        text-align: center;
+        width: 100%;
+    }
+
+    header {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    
+    header #branding h1 {
+        margin-bottom: 20px;
+    }
+    
+    header ul {
+        margin-top: 10px;
+    }
+
+    header li {
+        display: block; /* Membuat item navigasi menjadi vertikal */
+        padding: 10px 0;
+    }
+
+    /* Container & Content */
+    .container {
+        width: 95%; /* Memberi lebih banyak ruang pada layar kecil */
+    }
+
+    main {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.8em; /* Menyesuaikan ukuran font judul */
+    }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding-right: 15px; 
+  }
+  .logo img {
+    height: 30px; 
+  }
 }
