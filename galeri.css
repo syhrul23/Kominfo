@@ -409,12 +409,12 @@ modal {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 50px;
+  gap: 35px;
 }
 
 .pejabat-card {
-  width: 250px;
-  height: 260px;
+  width: 280px;
+  height: 220px;
   background-color: #fff;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   border-radius: 6px;
@@ -429,9 +429,20 @@ modal {
 
 .pejabat-card img {
   width: 100%;
-  height: 60%;
+  height: 70%;
   object-fit: cover;
   display: block;
+}
+
+.pejabat-card h5{
+  text-align: center;
+  margin-top: 20px;
+}
+
+.pejabat-card h6{
+  text-align: center;
+  align-items: center;
+  margin-top: 20px;
 }
 
 /* Tombol */
@@ -451,6 +462,7 @@ modal {
 
 .btn-lihat:hover {
   background-color: #dd8c43;
+  color: #f2f2f2;
 }
 
 
@@ -542,3 +554,4 @@ modal {
     .asw-menu-btn {
   display: none !important;
 }
+
