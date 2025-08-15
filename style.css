@@ -401,14 +401,18 @@ modal {
 
 /* === GAMBAR UNTUK TAMPILAN DESKTOP === */
 .carousel-inner .carousel-item:nth-child(1) {
-  background-image: url('Quality\ Restoration-AI\ UHD-alun_alun_kota_bogor_uhd.png');
+  background-image: url('bg/3.png');
 }
 .carousel-inner .carousel-item:nth-child(2) {
-  background-image: url('bg2.jpg');
+  background-image: url('bg/1.png');
 }
 .carousel-inner .carousel-item:nth-child(3) {
-  background-image: url('bg3.png');
+  background-image: url('bg/2.png');
 }
+.carousel-inner .carousel-item:nth-child(4) {
+  background-image: url('bg/4.png');
+}
+
 .carousel-caption-layer {
 z-index: 10;
 /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); */
@@ -1127,7 +1131,7 @@ footer {
   }
   
   .carousel-inner .carousel-item:nth-child(1) {
-    background-image: url('bghp1.jpeg');
+    background-image: url('bg/Quality\ Restoration-AI\ UHD-alun_alun_kota_bogor_uhd.png');
   }
   .carousel-inner .carousel-item:nth-child(2) {
     background-image: url('bghp2.jpeg');
@@ -1135,6 +1139,10 @@ footer {
   .carousel-inner .carousel-item:nth-child(3) {
     background-image: url('bg3hp.jpeg');
   }
+  .carousel-inner .carousel-item:nth-child(4) {
+    background-image: url('bg3hp.jpeg');
+  }
+
   .logo-container {
     gap: 40px; 
     padding: 0 10px;

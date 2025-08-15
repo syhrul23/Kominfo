@@ -99,21 +99,34 @@ document.addEventListener('DOMContentLoaded', function() {
     // (Kode JavaScript Anda yang lain bisa tetap di sini)
 });
     // Inisialisasi DataTable statis
-    $(document).ready(function() {
-    // Inisialisasi DataTable untuk tabel dengan id="myTable"
-    $('#myTable').DataTable({
-        theme:'bootstrap5',
-        pagingType:"simple_numbers",
-        responsive: true,
-        paging: true,
-        searching: true,
-        ordering: true,
-        pageLength: 10,
-        lengthMenu: [5, 10, 25, 50],
-        // Menampilkan tombol-tombol ekspor
-        dom: 'Bfrtip',
-        buttons: [
-            'copy', 'csv', 'excel', 'print'
-        ]
-    });
+   // Simpan inisialisasi DataTables ke dalam variabel agar mudah diakses
+const table = $('#myTable').DataTable({
+    theme: 'bootstrap5',
+    pagingType: "simple_numbers",
+    responsive: true,
+    paging: true,
+    searching: true, // Biarkan ini tetap 'true' untuk fitur pencarian bawaan
+    ordering: true,
+    pageLength: 8,
+    lengthMenu: [5, 10, 25, 50],
 });
+
+// Tambahkan logika filter kustom untuk DataTables
+$.fn.dataTable.ext.search.push(
+    function(settings, data, dataIndex) {
+        const kategoriValue = $('#kategoriFilter').val();
+        const kategoriKolom = data[3]; // Kolom ke-4 adalah "Kategori" (indeks 3)
+
+        // Jika nilai filter kosong atau cocok, tampilkan baris
+        if (kategoriValue === "" || kategoriKolom === kategoriValue) {
+            return true;
+        }
+        return false;
+    }
+);
+
+// Tambahkan event listener pada dropdown filter kategori
+$('#kategoriFilter').on('change', function() {
+    table.draw(); // Panggil ulang DataTables untuk menerapkan filter baru
+});
+
