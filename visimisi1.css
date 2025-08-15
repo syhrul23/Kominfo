@@ -65,13 +65,13 @@ header {
 
 
 .logo img {
-  height: 35px;
+  height: 45px;
   width: auto;
   margin: 0px;
 }
 
 .logo{
-  margin: 0px;
+  margin: -13px;
   padding: 0px;
 }
 

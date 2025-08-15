@@ -23,6 +23,15 @@ const agendaDummy = {
       type: ["Agenda Offline", "Pimpinan"],
       status: "Terjadwal"
     }
+   ],
+    "2025-08-15": [
+    {
+      title: "Selesai Magang",
+      time: "08:00 - 12:00 WIB",
+      organizer: "Dinas Kominfo Kota Bogor",
+      type: ["Offline", "Magang"],
+      status: "Terjadwal"
+    }
   ]
 };
 

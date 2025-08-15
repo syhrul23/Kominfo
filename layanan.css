@@ -1,4 +1,4 @@
-   * {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -74,6 +74,7 @@ header {
   margin: -13px;
   padding: 0px;
 }
+
 .nav-menu a {
   color: #3f7d9a;
   text-decoration: none;
@@ -149,7 +150,7 @@ header {
 }
 
 .overlay h1 {
-  font-size: 10px;
+  font-size: 2rem;
   font-weight: 700;
 }
 
@@ -383,20 +384,61 @@ modal {
   box-shadow: 0 8px 24px rgba(0,0,0,0.15);
 }
 
-.sejarah-container h2 {
-  font-size: 28px;
-  color: #dd8c43;
-  text-decoration: none;
-  display: inline-block;
+.layanan {
+  margin: 50px auto 40px auto; /* Tambah margin bawah */
+}
+.layanan-grid-modern {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  min-height: auto;
+  margin-bottom: 40px;
+}
+
+.layanan-card-modern {
+  background-color: #3f7d9a;
+  color: white;
+  border-radius: 20px;
+  padding: 40px 20px;
+  width: 100px;
+  min-height: 240px;
+  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.2);
+  justify-content: space-between; 
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 calc(33% - 20px); /* 3 per baris */
+  max-width: calc(33% - 80px);
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s;
+}
+
+
+.layanan-card-modern i {
+  font-size:  70px;
   margin-bottom: 20px;
-  text-decoration: underline;
-} 
-   .footer {
+}
+
+.layanan-card-modern:hover {
+  transform: translateY(-10px) scale(1.03);
+  background-color: #dd8c43;
+}
+
+p{
+  text-wrap:nowrap;
+  
+}
+.footer {
     background-color: #1e1d2b;
     color: #ffffff;
     padding: 60px 20px 20px;
     font-family: 'Cairo', sans-serif;
-    width:100vw;
+    width:100%;
     margin: 0;
     box-sizing: border-box;
     position: relative;
@@ -480,126 +522,6 @@ modal {
   display: none !important;
 }
 
-@media (max-width: 1024px) {
-   /* TAMBAHKAN KODE INI DI DALAM MEDIA QUERY */
-  header {
-    background: rgba(63, 125, 154, 0.7) 15%
-  }
-  .nav-toggle-label {
-    display: flex;
-    flex-direction: column;
-    cursor: pointer;
-    width: 32px;
-    height: 32px;
-    justify-content: center;
-    margin-left: 16px;
-    z-index: 1001;
-  }
-
-  .nav-toggle-label span {
-      display: block;
-      height: 4px;
-      width: 100%;
-      background: #ffffff;
-      margin: 2.5px 0;
-      border-radius: 2px;
-      transition: 0.3s;
-  }
-
-  .nav-menu {
-    position: absolute;
-    top: 60px;
-    right: 26px;
-    background: rgba(255,255,255,0.97);
-    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
-    flex-direction: column;
-    align-items: flex-start;
-    width: 200px;
-    padding: 20px 0;
-    gap: 0;
-    display: none;
-    z-index: 1000;
-  }
-  .nav-menu a {
-    margin: 10px 20px;
-    width: calc(100% - 40px);
-  }
-  .nav-toggle:checked + .nav-toggle-label + .nav-menu {
-    display: flex;
-  }
-
-  .nav-toggle:checked + .nav-toggle-label span:nth-child(1) {
-      transform: rotate(45deg) translate(5px, 5px);
-  }
-
-  .nav-toggle:checked + .nav-toggle-label span:nth-child(2) {
-      opacity: 0;
-  }
-
-  .nav-toggle:checked + .nav-toggle-label span:nth-child(3) {
-      transform: rotate(-45deg) translate(7px, -6px);
-  }
-   .sejarah-container {
-        padding: 20px 15px; /* Padding konten dikurangi */
-        margin-top: -40px; /* Margin top konten disesuaikan */
-    }
-    .sejarah-container p {
-        font-size: 15px;
-    }
-
-    .tooltip-text {
-        display: none;
-    }
-    /* --- FLOATING ICONS --- */
-    .floating-icon-bar {
-        right: 5px; /* Posisi ikon melayang disesuaikan */
-        gap: 8px; /* Jarak antar ikon dikurangi */
-    }
-    .tooltip-icon {
-        width: 35px; /* Lebar ikon dikurangi */
-        height: 35px; /* Tinggi ikon dikurangi */
-    }
-    .tooltip-icon i {
-        font-size: 16px; /* Ukuran ikon di dalam tombol dikurangi */
-    }
-    .tooltip-text {
-        display: none;
-    }
-
-    /* --- FOOTER --- */
-    .footer {
-        padding: 40px 15px 15px; /* Padding footer dikurangi */
-    }
-    .footer-container {
-        gap: 20px; /* Jarak antar elemen footer dikurangi */
-    }
-    .footer-map iframe {
-        height: 150px; /* Tinggi peta dikurangi */
-        max-width: 280px; /* Lebar peta dikurangi */
-    }
-    .footer-kontak h4, .footer-statistik h4 {
-        font-size: 16px; /* Ukuran font judul footer dikurangi */
-        margin-bottom: 10px; /* Margin bawah judul footer dikurangi */
-        padding-bottom: 3px; /* Padding bawah judul footer dikurangi */
-    }
-    .footer-kontak p {
-        font-size: 12px; /* Ukuran font teks kontak dikurangi */
-        line-height: 1.4; /* Line height teks kontak dikurangi */
-    }
-    .sosmed a img {
-        width: 24px; /* Ukuran ikon sosmed dikurangi */
-        height: 24px; /* Ukuran ikon sosmed dikurangi */
-        margin-right: 8px; /* Margin kanan ikon sosmed dikurangi */
-    }
-    .footer-statistik ul {
-        font-size: 12px; /* Ukuran font statistik dikurangi */
-    }
-    .footer-statistik ul li {
-        margin-bottom: 6px; /* Margin bawah item statistik dikurangi */
-        gap: 10px; /* Jarak antar item statistik dikurangi */
-    }
-}
- 
 @media (max-width: 915px) {
     /* --- NAVBAR & HEADER --- */
     header {
@@ -669,22 +591,13 @@ modal {
     
     /* --- HERO --- */
     .hero-inner h1 {
-        font-size: 25px; /* Disesuaikan untuk 915px */
+        font-size: 30px; /* Disesuaikan untuk 915px */
     }
 
     /* --- KONTEN --- */
     .sejarah-container {
         padding: 20px 15px;
         margin-top: -40px;
-    }
-    .visi {
-        font-size: 16px;
-        margin: 15px 0 20px;
-    }
-    .misi-list {
-        font-size: 14px;
-        padding-left: 10px;
-        line-height: 1.8;
     }
 
     /* --- FLOATING ICONS --- */
@@ -744,4 +657,35 @@ modal {
         gap: 10px;
         justify-content: center; /* Menengahkan statistik */
     }
-}
+    .layanan-card-modern {
+        flex: 0 0 calc(50% - 15px);
+        max-width: calc(50% - 15px);
+        min-height: 200px; 
+        padding: 20px 10px; 
+    }
+
+    .layanan-card-modern i {
+        font-size: 50px; /* Reduced icon size */
+        margin-bottom: 10px; /* Reduced margin */
+    }
+
+    .layanan-grid-modern {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    min-height: auto;
+    margin: 0px 10px 40px;  
+    }
+
+    .h2 {
+      font-size: 10px;
+    }
+    .h1{
+      font-size: 15px;
+    }
+  }
+

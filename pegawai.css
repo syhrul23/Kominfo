@@ -13,7 +13,7 @@ body, html {
 
 body{
   min-height: 100vh;
-  display: flex;
+  display: flex;  
   flex-direction: column;
 }
 
@@ -65,13 +65,13 @@ header {
 
 
 .logo img {
-  height: 35px;
+  height: 45px;
   width: auto;
   margin: 0px;
 }
 
 .logo{
-  margin: 0px;
+  margin: -13px;
   padding: 0px;
 }
 
@@ -520,6 +520,72 @@ modal {
   display: none !important;
 }
 
+@media (max-width: 1024px) {
+   /* TAMBAHKAN KODE INI DI DALAM MEDIA QUERY */
+  header {
+    background: rgba(63, 125, 154, 0.7) 15%
+  }
+  .nav-toggle-label {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    width: 32px;
+    height: 32px;
+    justify-content: center;
+    margin-left: 16px;
+    z-index: 1001;
+  }
+
+  .nav-toggle-label span {
+      display: block;
+      height: 4px;
+      width: 100%;
+      background: #ffffff;
+      margin: 2.5px 0;
+      border-radius: 2px;
+      transition: 0.3s;
+  }
+
+  .nav-menu {
+    position: absolute;
+    top: 60px;
+    right: 26px;
+    background: rgba(255,255,255,0.97);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+    flex-direction: column;
+    align-items: flex-start;
+    width: 200px;
+    padding: 20px 0;
+    gap: 0;
+    display: none;
+    z-index: 1000;
+  }
+  .nav-menu a {
+    margin: 10px 20px;
+    width: calc(100% - 40px);
+  }
+  .nav-toggle:checked + .nav-toggle-label + .nav-menu {
+    display: flex;
+  }
+
+  .nav-toggle:checked + .nav-toggle-label span:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .nav-toggle:checked + .nav-toggle-label span:nth-child(2) {
+      opacity: 0;
+  }
+
+  .nav-toggle:checked + .nav-toggle-label span:nth-child(3) {
+      transform: rotate(-45deg) translate(7px, -6px);
+  }
+   .sejarah-container {
+        padding: 20px 15px; /* Padding konten dikurangi */
+        margin-top: -40px; /* Margin top konten disesuaikan */
+    }
+  }
+
+
 @media(max-width: 768px) {
     /* Header & Navigasi */
     header #branding,
@@ -532,7 +598,7 @@ modal {
     }
 
     header {
-        padding-top: 20px;
+        padding-top: 18px;
         padding-bottom: 20px;
     }
     
@@ -555,19 +621,17 @@ modal {
     }
 
     main {
-        padding: 15px;
+        padding: 0px;
     }
 
     h1 {
         font-size: 1.8em; /* Menyesuaikan ukuran font judul */
     }
+      .footer-container{
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+  }
 }
 
-@media (max-width: 768px) {
-  .navbar {
-    padding-right: 15px; 
-  }
-  .logo img {
-    height: 30px; 
-  }
-}
+

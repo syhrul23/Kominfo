@@ -98,3 +98,22 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // (Kode JavaScript Anda yang lain bisa tetap di sini)
 });
+    // Inisialisasi DataTable statis
+    $(document).ready(function() {
+    // Inisialisasi DataTable untuk tabel dengan id="myTable"
+    $('#myTable').DataTable({
+        theme:'bootstrap5',
+        pagingType:"simple_numbers",
+        responsive: true,
+        paging: true,
+        searching: true,
+        ordering: true,
+        pageLength: 10,
+        lengthMenu: [5, 10, 25, 50],
+        // Menampilkan tombol-tombol ekspor
+        dom: 'Bfrtip',
+        buttons: [
+            'copy', 'csv', 'excel', 'print'
+        ]
+    });
+});
