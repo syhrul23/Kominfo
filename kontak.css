@@ -616,7 +616,13 @@ section.kontak-kami {
         padding-bottom: 3px; /* Padding bawah judul footer dikurangi */
     }
     .footer-kontak p {
-        font-size: 12px; /* Ukuran font teks kontak dikurangi */
+        font-size: 12px; /* 
+        
+        
+        
+        
+        
+         font teks kontak dikurangi */
         line-height: 1.4; /* Line height teks kontak dikurangi */
     }
     .sosmed a img {
@@ -768,4 +774,36 @@ section.kontak-kami {
         gap: 10px;
         justify-content: center; /* Menengahkan statistik */
     }
+ /* Update the existing CSS for .kontak-kami .kontak-container */
+.kontak-kami .kontak-container {
+    display: flex;
+    flex-wrap: nowrap; /* Change from wrap to nowrap to prevent wrapping */
+    justify-content: center;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow-x: auto; /* Add horizontal scrolling for small screens */
+    padding: 0 20px; /* Add some padding for better spacing on all screens */
 }
+
+/* Ensure the contact boxes don't shrink on mobile */
+.kontak-box {
+    flex-shrink: 0;
+    width: 280px; /* You can set a fixed width or a min-width */
+    min-height: 220px;
+    background-color: #3f7d9a;
+    color: white;
+    padding: 40px 25px;
+    border-radius: 30px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+    .kontak-kami .kontak-container {
+        justify-content: flex-start; /* Align items to the left to make scrolling feel more natural */
+        gap: 20px; /* Reduce the gap for smaller screens */
+    }
+}
+
+
+

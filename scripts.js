@@ -83,9 +83,29 @@ document.addEventListener('DOMContentLoaded', function() {
             tutupModal();
         }
     });
+    // Ambil elemen tombol "Monitoring" dan modal "Monitoring"
+var tombolMonitoring = document.getElementById('tombolMonitoring');
+var modalMonitoring = document.getElementById('modalMonitoring');
 
-    // --- AKHIR KODE MODAL PENILAIAN ---
-    
-    // (Kode JavaScript Anda yang lain bisa tetap di sini)
+// Ambil tombol tutup (close button) pada modal
+var closeMonitoringButton = document.getElementById('closeMonitoringButton');
+
+// Saat tombol monitoring diklik, tampilkan modal
+tombolMonitoring.onclick = function(event) {
+  event.preventDefault(); // Mencegah halaman berpindah ke atas
+  modalMonitoring.style.display = 'block';
+}
+
+// Saat tombol tutup (x) diklik, sembunyikan modal
+closeMonitoringButton.onclick = function() {
+  modalMonitoring.style.display = 'none';
+}
+
+// Saat pengguna mengklik di luar modal, sembunyikan modal
+window.onclick = function(event) {
+  if (event.target == modalMonitoring) {
+    modalMonitoring.style.display = 'none';
+  }
+}
 });
 
