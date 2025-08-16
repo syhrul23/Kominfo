@@ -382,77 +382,92 @@ modal {
   border-radius: 14px;
   box-shadow: 0 8px 24px rgba(0,0,0,0.15);
 }
-    h2 {
-    font-size: 36px;
-    font-weight: bold;
-    color: #222;
-    max-width: 1200px;
-    text-align: left;
-    margin: 0 auto 20px auto; /* Hapus margin atas dari sini */
-    margin-top: 60px; /* <-- Ubah nilai ini sesuai kebutuhan */
+
+.pejabat {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #ffffff;
+  color: #333;
 }
 
-    .news-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 30px;
-      max-width: 1200px;
-      margin: 20px auto;
-    }
+.pejabat h2 {
+  font-size: 28px;
+  margin-bottom: 37px;
+  text-align: start;
+  margin-left: 50px;
+  font-weight: bold;
+}
 
-    .news-card {
-      background: white;
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 6px 16px rgba(0,0,0,0.08);
-      transition: transform 0.3s ease;
-    }
+.pejabat p {
+  font-size: 15px;
+  color: #666;
+  margin-bottom: 40px;
+}
 
-    .news-card img {
-      display: block;
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-    }
+.pejabat-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10pxpx;
+  margin-left: 200px;
+  margin-bottom: 0px;
+  row-gap: 40px;
+}
 
-    .news-card .caption {
-      padding: 15px;
-      font-size: 16px;
-      font-weight: bold;
-      color: #222;
-    }
+.pejabat-card {
+  width: calc(23.33% - 22px); /* Perhitungan ini akan membuat 3 card dalam satu baris */
+  height: 220px;
+  background-color: #fff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  border-radius: 6px;
+  overflow: hidden;
+  transition: transform 0.3s;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+  margin-left: 100px;
+}
+.pejabat-card:hover {
+  transform: translateY(-5px);
+}
 
-    .news-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 24px rgba(0,0,0,0.1);
-    }
+.pejabat-card img {
+  width: 100%;
+  height: 70%;
+  object-fit: cover;
+  display: block;
+}
 
-    .btn-lihat {
-      display: inline-block;
-      background-color: #346e8c;
-      color: white;
-      padding: 10px 25px;
-      border-radius: 20px;
-      text-decoration: none;
-      font-size: 12px;
-      font-weight: bold;
-      margin: 40px auto 0;
-      transition: background-color 0.3s ease;
-    }
-    .btn-lihat:hover {
-      background-color: #274f68;
-    }
+.pejabat-card h5{
+  text-align: center;
+  margin-top: 20px;
+}
 
-    hr {
-      margin-top: 60px;
-      height: 2px;
-      background: #222;
-      border: none;
-      width: 90%;
-      margin-left: auto;
-      margin-right: auto;
-    }
-footer {
+.pejabat-card h6{
+  text-align: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+/* Tombol */
+.btn-wrapper {
+  margin-top: 40px;
+}
+
+.btn-lihat {
+  background-color: #3f7d9a;
+  color: white;
+  padding: 10px 25px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.btn-lihat:hover {
+  background-color: #dd8c43;
+  color: #f2f2f2;
+}
+
+
+   footer {
     padding: 40px 20px;
     background-color: #1c1b29;
 }
@@ -775,18 +790,4 @@ footer {
         gap: 10px;
         justify-content: center; /* Menengahkan statistik */
     }
-    .news-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 15px; /* Adjust the gap as needed */
-        margin: 0px 10px auto;
-    }
-    .news-card .caption{
-      font-size: 10px;
-    }
-    .h2 {
-      font-size: 10px;
-    }
-    .h1{
-      font-size: 15px;
-    }
-  }
+}

@@ -57,25 +57,24 @@
     <i class="fas fa-smile"></i>
     <span class="tooltip-text">Beri Penilaian</span>
   </a>
-  <a href="#" class="tooltip-icon">
-    <i class="fas fa-bullhorn"></i>
-    <span class="tooltip-text">Aspirasi</span>
-  </a>
+ <a href="#" class="tooltip-icon" data-bs-toggle="modal" data-bs-target="#layananModal">
+    <i class="fas fa-bullhorn"></i>
+    <span class="tooltip-text">Aduan Warga</span>
+</a>
   <a href="#" class="tooltip-icon" id="openAccessibilityMenuButton">
     <i class="fas fa-child"></i>
     <span class="tooltip-text">Aksesbilitas</span>
   </a>
-  <a href="#" class="tooltip-icon">
-    <i class="fas fa-stopwatch"></i>
-    <span class="tooltip-text">Monitoring</span>
-  </a>
+<a href="#" class="tooltip-icon" data-bs-toggle="modal" data-bs-target="#aksesCepatModal">
+    <i class="fas fa-bolt"></i>
+    <span class="tooltip-text">Akses Cepat</span>
+</a>
 </div>
 <section class="hero-judul">
   <div class="hero-overlay"></div> <!-- gelap tipis -->
   <div class="hero-inner">
     <nav class="breadcrumb">
       <a href="index.html">Beranda</a> /
-      <a href="profil.html">Profil</a> /
       <span class="active">Data Pegawai</span>
     </nav>
     <main class="container"></main>
@@ -200,6 +199,60 @@
         <button type="submit" class="btn-kirim">Kirim Masukan</button>
       </div>
     </form>
+  </div>
+</div>
+<div class="modal fade" id="aksesCepatModal" tabindex="-1" aria-labelledby="aksesCepatModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+
+      <!-- Header Fixed -->
+      <div class="modal-header flex-column align-items-start sticky-top bg-white" style="z-index: 10;">
+        <h5 class="modal-title text-success" id="aksesCepatModalLabel">Akses Cepat</h5>
+        <p class="mb-0 text-muted">
+          Dapatkan kemudahan akses ke beberapa layanan Pemerintah Diskominfo Kota Bogor.
+        </p>
+        <button type="button" class="btn-close position-absolute end-0 top-0 m-3" data-bs-dismiss="modal"></button>
+      </div>
+
+      <!-- Body Scrollable -->
+      <div class="modal-body" style="max-height: 60vh; overflow-y: auto;">
+        <div class="row g-3">
+          
+          <div class="col-md-6">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdH4_yWT-6GeCr5zz_NJMRxuCOJeUcKfDo52lqnaOCR4qNerg/viewform" target="_blank" class="p-3 border rounded h-100 d-block text-decoration-none text-dark">
+              <h6 class="fw-bold">Pengajuan TTE</h6>
+              <p class="small">Tanda tangan elektronik ini digunakan sebagai alat untuk mengesahkan dokumen atau transaksi elektronik, menggantikan tanda tangan manual pada dokumen fisik</p>
+            </a>
+          </div>
+
+          <div class="col-md-6">
+            <a href="https://wa.me/6281122882233" target="_blank" class="p-3 border rounded h-100 d-block text-decoration-none text-dark">
+              <h6 class="fw-bold">Chat Bogor Citizen Support</h6>
+              <p class="small">fitur layanan membantu warga Kota Bogor yang dapat dihubungi melalui chat atau obrolan untuk berkomunikasi dengan pihak berwenang atau staf Bogor Citizen Support.</p>
+            </a>
+          </div>
+
+          <div class="col-md-6">
+            <a href="#" target="_blank" class="p-3 border rounded h-100 d-block text-decoration-none text-dark">
+              <h6 class="fw-bold">Pembuatan Email Dinas</h6>
+              <p class="small">Pembuatan email dinas adalah proses membuat alamat email resmi yang digunakan untuk kepentingan instansi pemerintah, lembaga, sekolah, atau organisasi resmi lainnya.</p>
+            </a>
+          </div>
+
+          <div class="col-md-6">
+            <a href="https://ppid.kotabogor.go.id/" target="_blank" class="p-3 border rounded h-100 d-block text-decoration-none text-dark">
+              <h6 class="fw-bold">PPID</h6>
+              <p class="small">Pejabat Pengelola Informasi Dan Dokumentasi Kota Bogor</p>
+            </a>
+          </div>
+        </div> <!-- ✅ tutup row -->
+      </div> <!-- ✅ tutup modal-body -->
+
+      <!-- Footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-success" data-bs-dismiss="modal">Tutup</button>
+      </div>
+    </div>
   </div>
 </div>
 <!-- Footer -->

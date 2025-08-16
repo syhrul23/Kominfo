@@ -61,24 +61,23 @@
 
       <!-- sidebar -->
       <div class="floating-icon-bar">
-        <a href="#" id="tombolBeriPenilaian" class="tooltip-icon">
-          <i class="fas fa-smile"></i>
-          <span class="tooltip-text">Beri Penilaian</span>
-        </a>
-        <a href="#" class="tooltip-icon">
-          <i class="fas fa-bullhorn"></i>
-          <span class="tooltip-text">Aspirasi</span>
-        </a>
-        <a href="#" class="tooltip-icon" id="openAccessibilityMenuButton">
-          <i class="fas fa-child"></i>
-          <span class="tooltip-text">Aksesbilitas</span>
-        </a>
-        <a href="#" class="tooltip-icon">
-          <i class="fas fa-stopwatch"></i>
-          <span class="tooltip-text">Monitoring</span>
-        </a>
-      </div>
-      <section class="hero-judul">
+  <a href="#" id="tombolBeriPenilaian" class="tooltip-icon">
+    <i class="fas fa-smile"></i>
+    <span class="tooltip-text">Beri Penilaian</span>
+  </a>
+ <a href="#" class="tooltip-icon" data-bs-toggle="modal" data-bs-target="#layananModal">
+    <i class="fas fa-bullhorn"></i>
+    <span class="tooltip-text">Aduan Warga</span>
+</a>
+  <a href="#" class="tooltip-icon" id="openAccessibilityMenuButton">
+    <i class="fas fa-child"></i>
+    <span class="tooltip-text">Aksesbilitas</span>
+  </a>
+<a href="#" class="tooltip-icon" data-bs-toggle="modal" data-bs-target="#aksesCepatModal">
+    <i class="fas fa-bolt"></i>
+    <span class="tooltip-text">Akses Cepat</span>
+</a>
+</div>      <section class="hero-judul">
         <div class="hero-overlay"></div> <!-- gelap tipis -->
         <div class="hero-inner">
           <nav class="breadcrumb">
@@ -96,9 +95,9 @@
             <label for="kategoriFilter">Filter:</label>
             <select id="kategoriFilter">
                 <option value="">Semua Kategori</option>
-                <option value="Umum">Umum</option>
-                <option value="Laporan">Laporan</option>
-                <option value="Rapat">Rapat</option>
+                <option value="Perencanaan">Perencanaan</option>
+                <option value="Aplikasi">Aplikasi</option>
+                <option value="Regulasi">Regulasi</option>
                 </select>
         </div>
           <table id="myTable" class="display nowrap" style="width:100%">
@@ -114,44 +113,45 @@
             <tbody>
               <tr>
                 <td>1</td>
-                <td>sop-pemasangan-dan-penggantian-jaringan</td>
-                <td>Pemasangan dan Penggantian Perangkat Jaringan</td>
-                <td>Umum</td>
+                <td>Rencana Induk Pengembangan E-Government Kota Bogor Tahun 2014-2018</td>
+                <td>Merupakan panduan strategis untuk pengembangan di Pemerintah Kota Bogor.
+                </td>
+                <td>Perencanaan</td>
                 <td>
-                  <a href="sop-pemasangan-dan-penggantian-jaringan.pdf" target="_blank" class="btn-dokumen">
+                  <a href="Data_dokumen/rencana-induk-pengembangan-e-government-kota-bogor-tahun-2014---2018_copy.pdf" target="_blank" class="btn-dokumen">
                     <i class="fa-solid fa-file-pdf"></i> Lihat Dokumen
                   </a>
                 </td>
               </tr>
               <tr>
                 <td>2</td>
-                <td>sop-pemasangan-dan-penggantian-jaringan</td>
-                <td>Pemasangan dan Penggantian Perangkat Jaringan</td>
-                <td>Umum</td>
+                <td>Modul SIMRAL Pengisian Pendapatan</td>
+                <td>Mencatat transaksi penerimaan pendapatan daerah di aplikasi SIMRAL.</td>
+                <td>Aplikasi</td>
                 <td>
-                  <a href="sop-pemasangan-dan-penggantian-jaringan.pdf" target="_blank" class="btn-dokumen">
+                  <a href="Data_dokumen/modul-simral-pendapatan_copy.pdf" target="_blank" class="btn-dokumen">
                     <i class="fa-solid fa-file-pdf"></i> Lihat Dokumen
                   </a>
                 </td>
               </tr>
               <tr>
                 <td>3</td>
-                <td>sop-pemasangan-dan-penggantian-jaringan</td>
-                <td>Pemasangan dan Penggantian Perangkat Jaringan</td>
-                <td>Umum</td>
+                <td>Panduan Umum Tata Kelola TIK Nasional</td>
+                <td>Peraturan menteri tentang pedoman tata kelola TIK di institusi pemerintahan</td>
+                <td>Regulasi</td>
                 <td>
-                  <a href="sop-pemasangan-dan-penggantian-jaringan.pdf" target="_blank" class="btn-dokumen">
+                  <a href="Data_dokumen/pm-41-2007-panduan_tik_nasional_copy.pdf" target="_blank" class="btn-dokumen">
                     <i class="fa-solid fa-file-pdf"></i> Lihat Dokumen
                   </a>
                 </td>
               </tr>
               <tr>
                 <td>4</td>
-                <td>sop-pemasangan-dan-penggantian-jaringan</td>
-                <td>Pemasangan dan Penggantian Perangkat Jaringan</td>
-                <td>Umum</td>
+                <td>Instruksi Presiden No. 3 Tahun 2003</td>
+                <td>Tentang Kebijakan dan Strategi Nasional Pengembangan E-Government</td>
+                <td>Regulasi</td>
                 <td>
-                  <a href="sop-pemasangan-dan-penggantian-jaringan.pdf" target="_blank" class="btn-dokumen">
+                  <a href="Data_dokumen/inpres-no-3-th-2003_copy.pdf" target="_blank" class="btn-dokumen">
                     <i class="fa-solid fa-file-pdf"></i> Lihat Dokumen
                   </a>
                 </td>
@@ -160,7 +160,7 @@
                 <td>5</td>
                 <td>sop-pemasangan-dan-penggantian-jaringan</td>
                 <td>Pemasangan dan Penggantian Perangkat Jaringan</td>
-                <td>Umum</td>
+                <td>Regulasi</td>
                 <td>
                   <a href="sop-pemasangan-dan-penggantian-jaringan.pdf" target="_blank" class="btn-dokumen">
                     <i class="fa-solid fa-file-pdf"></i> Lihat Dokumen
@@ -169,20 +169,20 @@
               </tr>
               <tr>
                 <td>6</td>
-                <td>sop-pemasangan-dan-penggantian-jaringan</td>
-                <td>Pemasangan dan Penggantian Perangkat Jaringan</td>
-                <td>Umum</td>
+                <td>Masterplan Smart City Kota Bogor</td>
+                <td>visi, strategi, dan rencana aksi untuk pembangunan Smart City Kota Bogor </td>
+                <td>Perencanaan</td>
                 <td>
-                  <a href="sop-pemasangan-dan-penggantian-jaringan.pdf" target="_blank" class="btn-dokumen">
+                  <a href="Data_dokumen/buku-2.-masterplan-smart-city-kota-bogor_copy.pdf" target="_blank" class="btn-dokumen">
                     <i class="fa-solid fa-file-pdf"></i> Lihat Dokumen
                   </a>
                 </td>
               </tr>
               <tr>
                 <td>7</td>
-                <td>sop-pemasangan-dan-penggantian-jaringan</td>
-                <td>Pemasangan dan Penggantian Perangkat Jaringan</td>
-                <td>Umum</td>
+                <td>Penetapan RK Pemerintah Kota Bogor</td>
+                <td>Penetapan Rencana Kinerja Pemerintah Kota Bogor</td>
+                <td>Perencanaan</td>
                 <td>
                   <a href="sop-pemasangan-dan-penggantian-jaringan.pdf" target="_blank" class="btn-dokumen">
                     <i class="fa-solid fa-file-pdf"></i> Lihat Dokumen
@@ -191,9 +191,9 @@
               </tr>
               <tr>
                 <td>8</td>
-                <td>sop-pemasangan-dan-penggantian-jaringan</td>
-                <td>Pemasangan dan Penggantian Perangkat Jaringan</td>
-                <td>Umum</td>
+                <td>Modul SIMRAL</td>
+                <td>Penjelasan Nama Pengguna (Login) dan Grup Hak Akses</td>
+                <td>Aplikasi</td>
                 <td>
                   <a href="sop-pemasangan-dan-penggantian-jaringan.pdf" target="_blank" class="btn-dokumen">
                     <i class="fa-solid fa-file-pdf"></i> Lihat Dokumen
@@ -204,7 +204,7 @@
                 <td>9</td>
                 <td>sop-pemasangan-dan-penggantian-jaringan</td>
                 <td>Pemasangan dan Penggantian Perangkat Jaringan</td>
-                <td>Umum</td>
+                <td>Regulasi</td>
                 <td>
                   <a href="sop-pemasangan-dan-penggantian-jaringan.pdf" target="_blank" class="btn-dokumen">
                     <i class="fa-solid fa-file-pdf"></i> Lihat Dokumen
@@ -215,7 +215,7 @@
                 <td>10</td>
                 <td>sop-pemasangan-dan-penggantian-jaringan</td>
                 <td>Pemasangan dan Penggantian Perangkat Jaringan</td>
-                <td>Umum</td>
+                <td>Regulasi</td>
                 <td>
                   <a href="sop-pemasangan-dan-penggantian-jaringan.pdf" target="_blank" class="btn-dokumen">
                     <i class="fa-solid fa-file-pdf"></i> Lihat Dokumen
@@ -224,33 +224,33 @@
               </tr>
               <tr>
                 <td>11</td>
-                <td>sop-pemasangan-dan-penggantian-jaringan</td>
-                <td>Pemasangan dan Penggantian Perangkat Jaringan</td>
-                <td>Umum</td>
+                <td>Masterplan Smart City Kota Bogor</td>
+                <td>visi, strategi, dan rencana aksi untuk pembangunan Smart City Kota Bogor </td>
+                <td>Perencanaan</td>
                 <td>
-                  <a href="sop-pemasangan-dan-penggantian-jaringan.pdf" target="_blank" class="btn-dokumen">
+                  <a href="Data_dokumen/buku-2.-masterplan-smart-city-kota-bogor_copy.pdf" target="_blank" class="btn-dokumen">
                     <i class="fa-solid fa-file-pdf"></i> Lihat Dokumen
                   </a>
                 </td>
               </tr>
               <tr>
                 <td>12</td>
-                <td>sop-pemasangan-dan-penggantian-jaringan</td>
-                <td>Pemasangan dan Penggantian Perangkat Jaringan</td>
-                <td>Umum</td>
+                <td>Instruksi Presiden No. 3 Tahun 2003</td>
+                <td>Tentang Kebijakan dan Strategi Nasional Pengembangan E-Government</td>
+                <td>Regulasi</td>
                 <td>
-                  <a href="sop-pemasangan-dan-penggantian-jaringan.pdf" target="_blank" class="btn-dokumen">
+                  <a href="Data_dokumen/inpres-no-3-th-2003_copy.pdf" target="_blank" class="btn-dokumen">
                     <i class="fa-solid fa-file-pdf"></i> Lihat Dokumen
                   </a>
                 </td>
               </tr>
               <tr>
                 <td>13</td>
-                <td>sop-pemasangan-dan-penggantian-jaringan</td>
-                <td>Pemasangan dan Penggantian Perangkat Jaringan</td>
-                <td>Umum</td>
+                <td>Instruksi Presiden No. 3 Tahun 2003</td>
+                <td>Tentang Kebijakan dan Strategi Nasional Pengembangan E-Government</td>
+                <td>Regulasi</td>
                 <td>
-                  <a href="sop-pemasangan-dan-penggantian-jaringan.pdf" target="_blank" class="btn-dokumen">
+                  <a href="Data_dokumen/inpres-no-3-th-2003_copy.pdf" target="_blank" class="btn-dokumen">
                     <i class="fa-solid fa-file-pdf"></i> Lihat Dokumen
                   </a>
                 </td>
@@ -259,7 +259,7 @@
                 <td>14</td>
                 <td>sop-pemasangan-dan-penggantian-jaringan</td>
                 <td>Pemasangan dan Penggantian Perangkat Jaringan</td>
-                <td>Umum</td>
+                <td>Regulasi</td>
                 <td>
                   <a href="sop-pemasangan-dan-penggantian-jaringan.pdf" target="_blank" class="btn-dokumen">
                     <i class="fa-solid fa-file-pdf"></i> Lihat Dokumen
@@ -268,20 +268,20 @@
               </tr>
               <tr>
                 <td>15</td>
-                <td>sop-pemasangan-dan-penggantian-jaringan</td>
-                <td>Pemasangan dan Penggantian Perangkat Jaringan</td>
-                <td>Umum</td>
+                <td>Masterplan Smart City Kota Bogor</td>
+                <td>visi, strategi, dan rencana aksi untuk pembangunan Smart City Kota Bogor </td>
+                <td>Perencanaan</td>
                 <td>
-                  <a href="sop-pemasangan-dan-penggantian-jaringan.pdf" target="_blank" class="btn-dokumen">
+                  <a href="Data_dokumen/buku-2.-masterplan-smart-city-kota-bogor_copy.pdf" target="_blank" class="btn-dokumen">
                     <i class="fa-solid fa-file-pdf"></i> Lihat Dokumen
                   </a>
                 </td>
               </tr>
               <tr>
                 <td>16</td>
-                <td>sop-pemasangan-dan-penggantian-jaringan</td>
-                <td>Pemasangan dan Penggantian Perangkat Jaringan</td>
-                <td>Umum</td>
+                <td>Penetapan RK Pemerintah Kota Bogor</td>
+                <td>Penetapan Rencana Kinerja Pemerintah Kota Bogor</td>
+                <td>Perencanaan</td>
                 <td>
                   <a href="sop-pemasangan-dan-penggantian-jaringan.pdf" target="_blank" class="btn-dokumen">
                     <i class="fa-solid fa-file-pdf"></i> Lihat Dokumen
@@ -290,11 +290,32 @@
               </tr>
               <tr>
                 <td>17</td>
-                <td>sop-pemasangan-dan-penggantian-jaringan</td>
-                <td>Pemasangan dan Penggantian Perangkat Jaringan</td>
-                <td>Umum</td>
+                <td>Modul SIMRAL</td>
+                <td>Penjelasan Nama Pengguna (Login) dan Grup Hak Akses</td>
+                <td>Aplikasi</td>
                 <td>
                   <a href="sop-pemasangan-dan-penggantian-jaringan.pdf" target="_blank" class="btn-dokumen">
+                    <i class="fa-solid fa-file-pdf"></i> Lihat Dokumen
+                  </a>
+                </td>
+              </tr>
+              <tr><td>18</td>
+                <td>sop-pemasangan-dan-penggantian-jaringan</td>
+                <td>Pemasangan dan Penggantian Perangkat Jaringan</td>
+                <td>Regulasi</td>
+                <td>
+                  <a href="sop-pemasangan-dan-penggantian-jaringan.pdf" target="_blank" class="btn-dokumen">
+                    <i class="fa-solid fa-file-pdf"></i> Lihat Dokumen
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td>19</td>
+                <td>Modul SIMRAL Pengisian Pendapatan</td>
+                <td>Mencatat transaksi penerimaan pendapatan daerah di aplikasi SIMRAL.</td>
+                <td>Aplikasi</td>
+                <td>
+                  <a href="Data_dokumen/modul-simral-pendapatan_copy.pdf" target="_blank" class="btn-dokumen">
                     <i class="fa-solid fa-file-pdf"></i> Lihat Dokumen
                   </a>
                 </td>
@@ -306,47 +327,41 @@
         </div>
       </section>
       <!-- Footer -->
-      <footer class="footer">
-        <div class="footer-container">
-          <div class="footer-map">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.4161454299747!2d106.79109007413658!3d-6.595089664468269!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69c5b7d2e12d0d%3A0x9b59e38fc692d9fe!2sKantor%20Kominfo%20Kota%20Bogor!5e0!3m2!1sen!2sid!4v1752851198269!5m2!1sen!2sid"
-              width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
-          </div>
+      <footer>
+    <div class="footer-container">
+        <!-- Kolom 1: Google Maps -->
+        <div class="footer-col">
+    <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.416102757582!2d106.79366499999999!3d-6.595095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69c5b7d2e12d0d%3A0x9b59e38fc692d9fe!2sKantor%20DISKOMINFO%20Kota%20Bogor!5e0!3m2!1sid!2sid!4v1755157383311!5m2!1sid!2sid" 
+        width="300" 
+        height="200" 
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy">
+    </iframe>
+  </div>
 
-          <div class="footer-kontak">
-            <h4>Kontak Kami</h4>
-            <p>
-              Jl. Ir. H. Juanda No.10, RT.01/RW.01, Pabaton,<br>
-              Kecamatan Bogor Tengah, Kota Bogor, Jawa Barat 16121<br><br>
-              Telp: <a href="tel:+622518321075">+62251-8321075 Ext. 287</a><br>
-              e-mail Admin Web: <a href="mailto:kominfo@kotabogor.go.id" target="_blank">kominfo@kotabogor.go.id</a>
-            </p>
-            <div class="sosmed">
-              <a href="https://www.facebook.com/kominfokotabogor" target="_blank" rel="noopener"><img src="fb.png"
-                  alt="Facebook"></a>
-              <a href="https://www.instagram.com/kominfobogor?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
-                target="_blank" rel="noopener"><img src="instagram.png" alt="Instagram"></a>
-              <a href="https://youtube.com/@kominfokotabogor2892?si=DYzwmdH5Fa8aDNeZ" target="_blank"
-                rel="noopener"><img src="youtube.png" alt="YouTube"></a>
-              <a href="https://x.com/kominfobogor" target="_blank" rel="noopener"><img src="twitter.png" class="logo-x"
-                  alt="Twitter/X"></a>
-            </div>
-          </div>
-          <div class="footer-statistik">
-            <h4>Statistik Pengunjung</h4>
-            <ul>
-              <li>➡️ Hari ini <span>123</span></li>
-              <li>➡️ Kemarin <span>12345</span></li>
-              <li>➡️ Bulan ini <span>1234567</span></li>
-              <li>➡️ Tahun ini <span>12345678</span></li>
-              <li>➡️ Semua Waktu <span>123456789</span></li>
-            </ul>
-          </div>
+        <!-- Kolom 2: Alamat & Kontak -->
+        <div class="footer-col">
+            <h3>Kontak Kami</h3>
+            <p>Jl. Ir. H. Juanda No.10, RT.01/RW.01, Pabaton,<br>
+               Kecamatan Bogor Tengah, Kota Bogor, Jawa Barat 16121</p>
+            <p>Telp: <a href="tel:+622518321075">+62251-8321075 Ext. 287</a><br>
+               e-mail Admin Web: <a href="mailto:kominfo@kotabogor.go.id">kominfo@kotabogor.go.id</a></p>
         </div>
-      </footer>
+
+        <!-- Kolom 3: Sosial Media & Copyright -->
+        <div class="footer-col social-col">
+            <div class="social-icons">
+                <a href="https://www.instagram.com/kominfobogor?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com/kominfobogor/?locale=id_ID" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://x.com/kominfobogor" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.youtube.com/@diskominfokotabogor554" target="_blank"><i class="fab fa-youtube"></i></a>
+            </div>
+            <p class="copyright">© Dinas Komunikasi dan Informatika Kota Bogor</p>
+        </div>
+    </div>
+</footer>
       <!-- Footer -->
  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
@@ -389,7 +404,60 @@
           </form>
         </div>
       </div>
+<div class="modal fade" id="aksesCepatModal" tabindex="-1" aria-labelledby="aksesCepatModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
 
+      <!-- Header Fixed -->
+      <div class="modal-header flex-column align-items-start sticky-top bg-white" style="z-index: 10;">
+        <h5 class="modal-title text-success" id="aksesCepatModalLabel">Akses Cepat</h5>
+        <p class="mb-0 text-muted">
+          Dapatkan kemudahan akses ke beberapa layanan Pemerintah Diskominfo Kota Bogor.
+        </p>
+        <button type="button" class="btn-close position-absolute end-0 top-0 m-3" data-bs-dismiss="modal"></button>
+      </div>
+
+      <!-- Body Scrollable -->
+      <div class="modal-body" style="max-height: 60vh; overflow-y: auto;">
+        <div class="row g-3">
+          
+          <div class="col-md-6">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdH4_yWT-6GeCr5zz_NJMRxuCOJeUcKfDo52lqnaOCR4qNerg/viewform" target="_blank" class="p-3 border rounded h-100 d-block text-decoration-none text-dark">
+              <h6 class="fw-bold">Pengajuan TTE</h6>
+              <p class="small">Tanda tangan elektronik ini digunakan sebagai alat untuk mengesahkan dokumen atau transaksi elektronik, menggantikan tanda tangan manual pada dokumen fisik</p>
+            </a>
+          </div>
+
+          <div class="col-md-6">
+            <a href="https://wa.me/6281122882233" target="_blank" class="p-3 border rounded h-100 d-block text-decoration-none text-dark">
+              <h6 class="fw-bold">Chat Bogor Citizen Support</h6>
+              <p class="small">fitur layanan membantu warga Kota Bogor yang dapat dihubungi melalui chat atau obrolan untuk berkomunikasi dengan pihak berwenang atau staf Bogor Citizen Support.</p>
+            </a>
+          </div>
+
+          <div class="col-md-6">
+            <a href="#" target="_blank" class="p-3 border rounded h-100 d-block text-decoration-none text-dark">
+              <h6 class="fw-bold">Pembuatan Email Dinas</h6>
+              <p class="small">Pembuatan email dinas adalah proses membuat alamat email resmi yang digunakan untuk kepentingan instansi pemerintah, lembaga, sekolah, atau organisasi resmi lainnya.</p>
+            </a>
+          </div>
+
+          <div class="col-md-6">
+            <a href="https://ppid.kotabogor.go.id/" target="_blank" class="p-3 border rounded h-100 d-block text-decoration-none text-dark">
+              <h6 class="fw-bold">PPID</h6>
+              <p class="small">Pejabat Pengelola Informasi Dan Dokumentasi Kota Bogor</p>
+            </a>
+          </div>
+        </div> <!-- ✅ tutup row -->
+      </div> <!-- ✅ tutup modal-body -->
+
+      <!-- Footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-success" data-bs-dismiss="modal">Tutup</button>
+      </div>
+    </div>
+  </div>
+</div>
 </body>
 <script>
 </script>
