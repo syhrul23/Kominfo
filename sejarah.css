@@ -391,90 +391,76 @@ modal {
   margin-bottom: 20px;
   text-decoration: underline;
 } 
-   .footer {
-    background-color: #1e1d2b;
-    color: #ffffff;
-    padding: 60px 20px 20px;
-    font-family: 'Cairo', sans-serif;
-    width:100vw;
-    margin: 0;
-    box-sizing: border-box;
-    position: relative;
-    }
+   footer {
+    padding: 40px 20px;
+    background-color: #1c1b29;
+}
 
-    .footer-container {
+.footer-container {
     display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
     flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 30px;
-    max-width:1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-    width: 100%;
-    box-sizing: border-box; /* Pastikan footer mengisi lebar penuh */
-    }
+  margin-left: 161px
+}
 
-    .footer-map img {
-    width: 100%;
-    max-width: 300px;
-    border-radius: 6px;
-    }
-
-    .footer-kontak,
-    .footer-statistik {
+.footer-col {
     flex: 1;
-    min-width: 250px;
-    }
+    min-width: 10px;
+}
 
-    .footer-kontak h4,
-    .footer-statistik h4 {
-    font-size: 18px;
-    margin-bottom: 15px;
-    border-bottom: 2px solid #888;
+.footer-col h3 {
+  color: #ffffff;
+    margin-top: 14px;
+    margin-bottom: 10px;
+}
+
+.footer-col p {
+  color:#ffffff;
+    margin: 5px 0;
+    line-height: 2;
+}
+.footer-col-alamat{
+  margin-right:22%;
+}
+
+.footer-col a {
+    color: #4da3ff;
+    text-decoration: none;
+}
+
+.footer-col a:hover {
+    text-decoration: underline;
+}
+
+.social-icons {
+    margin-bottom: 0px;
+}
+
+.social-icons a {
     display: inline-block;
-    padding-bottom: 5px;
-    }
+    margin: 0 6px;
+  margin-top:65px;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    border: 2px solid white;
+    border-radius: 50%;
+    color: white;
+    font-size: 18px;
+    transition: all 0.3s ease;
+}
 
-    .footer-kontak p {
-    font-size: 14px;
-    line-height: 1.6;
-    color: #cccccc;
-    }
+.social-icons a:hover {
+    background-color: white;
+    color: #1c1b29;
+}
 
-    .sosmed {
-    margin-top: 15px;
-    }
-
-    .sosmed a img {
-    width: 28px;
-    height: 28px;
-    margin-right: 10px;
-    transition: transform 0.3s;
-    }
-
-    .sosmed a:hover img {
-    transform: scale(1.2);
-    }
-
-    .logo-x {
-    position: relative;  /* atau absolute jika ingin benar-benar mengambang */
-    z-index: 9999;
-    height: 10px;        
-    }
-
-
-    .footer-statistik ul {
-    list-style: none;
-    padding: 0;
-    font-size: 14px;
-    }
-
-    .footer-statistik ul li {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 8px;
-    color: #4CAF50;
-    }
+.copyright {
+    font-size: 13px;
+    margin-top: 10px;
+}
 
       .asw-menu-btn {
   display: none !important;
