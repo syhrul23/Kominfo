@@ -565,41 +565,7 @@ modal {
     .tooltip-text {
         display: none;
     }
-
-    /* --- FOOTER --- */
-    .footer {
-        padding: 40px 15px 15px; /* Padding footer dikurangi */
-    }
-    .footer-container {
-        gap: 20px; /* Jarak antar elemen footer dikurangi */
-    }
-    .footer-map iframe {
-        height: 150px; /* Tinggi peta dikurangi */
-        max-width: 280px; /* Lebar peta dikurangi */
-    }
-    .footer-kontak h4, .footer-statistik h4 {
-        font-size: 16px; /* Ukuran font judul footer dikurangi */
-        margin-bottom: 10px; /* Margin bawah judul footer dikurangi */
-        padding-bottom: 3px; /* Padding bawah judul footer dikurangi */
-    }
-    .footer-kontak p {
-        font-size: 12px; /* Ukuran font teks kontak dikurangi */
-        line-height: 1.4; /* Line height teks kontak dikurangi */
-    }
-    .sosmed a img {
-        width: 24px; /* Ukuran ikon sosmed dikurangi */
-        height: 24px; /* Ukuran ikon sosmed dikurangi */
-        margin-right: 8px; /* Margin kanan ikon sosmed dikurangi */
-    }
-    .footer-statistik ul {
-        font-size: 12px; /* Ukuran font statistik dikurangi */
-    }
-    .footer-statistik ul li {
-        margin-bottom: 6px; /* Margin bawah item statistik dikurangi */
-        gap: 10px; /* Jarak antar item statistik dikurangi */
-    }
-}
- 
+  }
 @media (max-width: 915px) {
     /* --- NAVBAR & HEADER --- */
     header {
