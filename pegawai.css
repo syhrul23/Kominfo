@@ -614,10 +614,14 @@ footer {
     h1 {
         font-size: 1.8em; /* Menyesuaikan ukuran font judul */
     }
-      .footer-container{
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
+       .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-left: 0;
+  }
+  .footer-col {
+    min-width: unset;
   }
 }
 

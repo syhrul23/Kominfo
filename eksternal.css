@@ -520,22 +520,23 @@ modal {
       margin-left: auto;
       margin-right: auto;
     }
-footer {
-    padding: 40px 20px;
-    background-color: #1c1b29;
-}
+    footer {
+        padding: 40px 20px;
+        background-color: #1c1b29;
+    }
 
 .footer-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-wrap: wrap;
-  margin-left: 161px
+   display: flex;
+   justify-content: space-between;
+   align-items: flex-start;
+   flex-wrap: wrap;
+   max-width: 1200px; /* Tambahkan ini agar tidak terlalu lebar di desktop */
+   margin: 0 auto; /* Ganti margin-left dengan auto untuk rata tengah */
 }
 
 .footer-col {
-    flex: 1;
-    min-width: 10px;
+  flex: 1;
+  min-width: 200px; /* Berikan lebar minimum agar tidak terlalu sempit */
 }
 
 .footer-col h3 {
@@ -673,39 +674,15 @@ footer {
     .tooltip-text {
         display: none;
     }
-
-    /* --- FOOTER --- */
-    .footer {
-        padding: 40px 15px 15px; /* Padding footer dikurangi */
-    }
     .footer-container {
-        gap: 20px; /* Jarak antar elemen footer dikurangi */
-    }
-    .footer-map iframe {
-        height: 150px; /* Tinggi peta dikurangi */
-        max-width: 280px; /* Lebar peta dikurangi */
-    }
-    .footer-kontak h4, .footer-statistik h4 {
-        font-size: 16px; /* Ukuran font judul footer dikurangi */
-        margin-bottom: 10px; /* Margin bawah judul footer dikurangi */
-        padding-bottom: 3px; /* Padding bawah judul footer dikurangi */
-    }
-    .footer-kontak p {
-        font-size: 12px; /* Ukuran font teks kontak dikurangi */
-        line-height: 1.4; /* Line height teks kontak dikurangi */
-    }
-    .sosmed a img {
-        width: 24px; /* Ukuran ikon sosmed dikurangi */
-        height: 24px; /* Ukuran ikon sosmed dikurangi */
-        margin-right: 8px; /* Margin kanan ikon sosmed dikurangi */
-    }
-    .footer-statistik ul {
-        font-size: 12px; /* Ukuran font statistik dikurangi */
-    }
-    .footer-statistik ul li {
-        margin-bottom: 6px; /* Margin bawah item statistik dikurangi */
-        gap: 10px; /* Jarak antar item statistik dikurangi */
-    }
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-left: 0;
+  }
+  .footer-col {
+    min-width: unset;
+  }
 }
  
 @media (max-width: 915px) {
@@ -802,45 +779,13 @@ footer {
     .tooltip-text {
         display: none;
     }
-
-    /* --- FOOTER --- */
-    .footer {
-        padding: 40px 15px 15px;
-    }
     .footer-container {
-        gap: 20px;
-        /* Membuat footer menjadi satu kolom */
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-    .footer-map iframe {
-        height: 150px;
-        max-width: 280px;
-    }
-    .footer-kontak h4, .footer-statistik h4 {
-        font-size: 16px;
-        margin-bottom: 10px;
-        padding-bottom: 3px;
-    }
-    .footer-kontak p {
-        font-size: 12px;
-        line-height: 1.4;
-    }
-    .sosmed a img {
-        width: 24px;
-        height: 24px;
-        margin-right: 8px;
-    }
-    .sosmed {
-        justify-content: center;
-    }
-    .footer-statistik ul {
-        font-size: 12px;
-    }
-    .footer-statistik ul li {
-        margin-bottom: 6px;
-        gap: 10px;
-        justify-content: center; /* Menengahkan statistik */
-    }
-}
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-left: 0;
+  }
+  .footer-col {
+    min-width: unset;
+  }
+  }
