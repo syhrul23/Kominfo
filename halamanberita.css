@@ -556,38 +556,17 @@ modal {
     }
 
     /* --- FOOTER --- */
-    .footer {
-        padding: 40px 15px 15px; /* Padding footer dikurangi */
-    }
     .footer-container {
-        gap: 20px; /* Jarak antar elemen footer dikurangi */
-    }
-    .footer-map iframe {
-        height: 150px; /* Tinggi peta dikurangi */
-        max-width: 280px; /* Lebar peta dikurangi */
-    }
-    .footer-kontak h4, .footer-statistik h4 {
-        font-size: 16px; /* Ukuran font judul footer dikurangi */
-        margin-bottom: 10px; /* Margin bawah judul footer dikurangi */
-        padding-bottom: 3px; /* Padding bawah judul footer dikurangi */
-    }
-    .footer-kontak p {
-        font-size: 12px; /* Ukuran font teks kontak dikurangi */
-        line-height: 1.4; /* Line height teks kontak dikurangi */
-    }
-    .sosmed a img {
-        width: 24px; /* Ukuran ikon sosmed dikurangi */
-        height: 24px; /* Ukuran ikon sosmed dikurangi */
-        margin-right: 8px; /* Margin kanan ikon sosmed dikurangi */
-    }
-    .footer-statistik ul {
-        font-size: 12px; /* Ukuran font statistik dikurangi */
-    }
-    .footer-statistik ul li {
-        margin-bottom: 6px; /* Margin bawah item statistik dikurangi */
-        gap: 10px; /* Jarak antar item statistik dikurangi */
-    }
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-left: 0;
+  }
+  .footer-col {
+    min-width: unset;
+  }
 }
+
  
 @media (max-width: 915px) {
     /* --- NAVBAR & HEADER --- */
@@ -693,111 +672,4 @@ modal {
         display: none;
     }
 
-    /* --- FOOTER --- */
-    .footer {
-        padding: 40px 15px 15px;
-    }
-    .footer-container {
-        gap: 20px;
-        /* Membuat footer menjadi satu kolom */
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-    .footer-map iframe {
-        height: 150px;
-        max-width: 280px;
-    }
-    .footer-kontak h4, .footer-statistik h4 {
-        font-size: 16px;
-        margin-bottom: 10px;
-        padding-bottom: 3px;
-    }
-    .footer-kontak p {
-        font-size: 12px;
-        line-height: 1.4;
-    }
-    .sosmed a img {
-        width: 24px;
-        height: 24px;
-        margin-right: 8px;
-    }
-    .sosmed {
-        justify-content: center;
-    }
-    .footer-statistik ul {
-        font-size: 12px;
-    }
-    .footer-statistik ul li {
-        margin-bottom: 6px;
-        gap: 10px;
-        justify-content: center; /* Menengahkan statistik */
-    }
-}
-.judul-berita {
-  color: #f36f21; /* oranye */
-  font-size: 28px;
-  font-weight: bold;
-  margin-bottom: 50px;
-}
-
-.card-container {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  margin-top: 20px;
-  flex-wrap: wrap;
-}
-
-.card {
-  width: 280px;
-  background: #fff;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  text-decoration: none; /* hilangkan underline */
-  color: inherit; /* biar tulisan tetap hitam */
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 15px rgba(0,0,0,0.15);
-}
-
-.card img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-}
-
-.card-caption {
-  padding: 15px;
-  font-size: 14px;
-  font-weight: 500;
-  color: #333;
-  flex-grow: 1;
-}
-.berita-wrapper {
-  max-width: 1200px;   /* lebar konten */
-  margin: 0 auto;      /* biar center */
-  padding: 0 20px;     /* jarak kiri kanan */
-}
-
-.judul-berita {
-  color: #f36f21;
-  font-size: 28px;
-  font-weight: bold;
-  margin-bottom: 50px;
-  margin-top: 50px; /* jarak atas */
-  margin-left: 130px;
-}
-.sejarah-container img {
-  width: 100%;      /* lebar penuh container */
-  height: auto;     /* proporsi tetap */
-  display: block;   /* hilangkan jarak bawah */
-  margin: 0 auto;   /* biar center */
-}
-
+  
