@@ -32,6 +32,15 @@ const agendaDummy = {
       type: ["Offline", "Magang"],
       status: "Terjadwal"
     }
+  ],
+   "2025-08-20": [
+    {
+      title: "Presentasi",
+      time: "08:00 - 12:00 WIB",
+      organizer: "Dinas Kominfo Kota Bogor",
+      type: ["Offline", "Magang"],
+      status: "Terjadwal"
+    }
   ]
 };
 
@@ -98,3 +107,4 @@ function changeMonth(diff) {
 }
 
 renderCalendar(current);
+
