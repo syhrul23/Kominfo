@@ -1136,4 +1136,12 @@ footer {
     height: 50px;
   }
 }
+.card a {
+  text-decoration: none;   /* hilangkan garis bawah */
+  color: inherit;          /* gunakan warna bawaan teks (bukan biru) */
+  display: block;          /* biar area klik mencakup gambar + teks */
+}
 
+.card a:hover {
+  color: inherit;          /* saat hover tetap sama warnanya */
+}
