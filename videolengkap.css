@@ -527,6 +527,58 @@ footer {
   display: none !important;
 }
 
+.pagination {
+  display: flex;
+  
+  .page-numbers {
+    display: flex;               /* centering */
+    align-items: center;         /* vertikal tengah */
+    justify-content: center;     /* horizontal tengah */
+
+    padding: 0;                  /* biar ukuran fix sama lingkaran */
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    font-size: 1rem;
+    font-weight: 700;
+    margin: 0.3rem;
+    margin-bottom: 30px;
+    border: 1px solid #f4f6fa;
+    background: #f4f6fa;
+    line-height: 1;               /* reset line-height */
+    
+    @media(max-width: 480px) {
+      width: 2rem;
+      height: 2rem;
+      font-size: 1rem;
+    }
+
+    &.current {
+      color: #fff;
+      background: #00AAF1;
+    }
+
+    i {
+      font-size: 1em;
+      line-height: 1; /* ikon juga center */
+    }
+  }
+
+  a {
+    color: #000;
+    text-decoration: none;
+    transition: all 0.4s;
+    &:hover {
+      color: #fff;
+      background: #00AAF1;
+    }
+  }
+
+  &.pagination--left { justify-content: flex-start; }
+  &.pagination--center { justify-content: center; }
+  &.pagination--right { justify-content: flex-end; }
+}
+
 @media (max-width: 1024px) {
    /* TAMBAHKAN KODE INI DI DALAM MEDIA QUERY */
   header {
