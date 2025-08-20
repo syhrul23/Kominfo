@@ -300,11 +300,10 @@
   <script src="scripts.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 
-  <div id="modalPenilaian" class="modal">
+<div id="modalPenilaian" class="modal">
   <div class="modal-content">
     <span class="close-button">&times;</span>
     <h2>Berikan Masukan untuk Perbaikan Portal</h2>
-    
     <form>
       <div class="form-group">
         <label>Seberapa Puas Anda dengan Website Diskominfo Kota Bogor</label>
@@ -312,15 +311,13 @@
           <span>😞</span> <span>😐</span> <span>😊</span> <span>😍</span>
         </div>
       </div>
-      
       <div class="form-group">
         <label>Apakah Anda dapat menemukan berita/informasi layanan publik/agenda yang Anda cari?</label>
         <input type="radio" name="info" value="tidak"> Tidak
         <input type="radio" name="info" value="ya"> Ya
       </div>
-      
       <div class="form-group">
-        <label for="kritik">Kritik dan saran Anda untuk Portal Diskominfo Kota Bogor?</label>
+        <label for="kritik">Kritik dan saran Anda untuk Website Diskominfo Kota Bogor?</label>
         <textarea id="kritik" rows="4" placeholder="Masukkan jawaban Anda di sini"></textarea>
       </div>
       <div class="modal-footer">
@@ -330,42 +327,34 @@
     </form>
   </div>
 </div>
+
 <!-- Modal Akses Cepat -->
 <div class="modal fade" id="aksesCepatModal" tabindex="-1" aria-labelledby="aksesCepatModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-lg">
     <div class="modal-content">
-
-      <!-- Header Fixed -->
-      <div class="modal-header flex-column align-items-start sticky-top bg-white" style="z-index: 10;">
+      <div class="modal-header flex-column align-items-start sticky-top bg-white">
         <h5 class="modal-title text-success" id="aksesCepatModalLabel">Akses Cepat</h5>
-        <p class="mb-0 text-muted">
-          Dapatkan kemudahan akses ke beberapa layanan Pemerintah Diskominfo Kota Bogor.
-        </p>
+        <p class="mb-0 text-muted">Dapatkan kemudahan akses ke beberapa layanan Pemerintah Diskominfo Kota Bogor.</p>
         <button type="button" class="btn-close position-absolute end-0 top-0 m-3" data-bs-dismiss="modal"></button>
       </div>
-
-      <!-- Body Scrollable -->
       <div class="modal-body" style="max-height: 60vh; overflow-y: auto;">
         <div class="row g-3">
-          
           <div class="col-md-6">
             <a href="https://docs.google.com/forms/d/e/1FAIpQLSdH4_yWT-6GeCr5zz_NJMRxuCOJeUcKfDo52lqnaOCR4qNerg/viewform" target="_blank" class="p-3 border rounded h-100 d-block text-decoration-none text-dark">
               <h6 class="fw-bold">Pengajuan TTE</h6>
-              <p class="small">Tanda tangan elektronik ini digunakan sebagai alat untuk mengesahkan dokumen atau transaksi elektronik, menggantikan tanda tangan manual pada dokumen fisik</p>
+              <p class="small">Tanda tangan elektronik ini digunakan sebagai alat untuk mengesahkan dokumen atau transaksi elektronik.</p>
             </a>
           </div>
-
           <div class="col-md-6">
             <a href="https://wa.me/6281122882233" target="_blank" class="p-3 border rounded h-100 d-block text-decoration-none text-dark">
               <h6 class="fw-bold">Chat Bogor Citizen Support</h6>
-              <p class="small">fitur layanan membantu warga Kota Bogor yang dapat dihubungi melalui chat atau obrolan untuk berkomunikasi dengan pihak berwenang atau staf Bogor Citizen Support.</p>
+              <p class="small">Layanan chat warga Kota Bogor untuk komunikasi dengan staf Bogor Citizen Support.</p>
             </a>
           </div>
-
           <div class="col-md-6">
             <a href="#" target="_blank" class="p-3 border rounded h-100 d-block text-decoration-none text-dark">
               <h6 class="fw-bold">Pembuatan Email Dinas</h6>
-              <p class="small">Pembuatan email dinas adalah proses membuat alamat email resmi yang digunakan untuk kepentingan instansi pemerintah, lembaga, sekolah, atau organisasi resmi lainnya.</p>
+              <p class="small">Proses pembuatan email resmi untuk instansi pemerintah.</p>
             </a>
           </div>
           <div class="col-md-6">
@@ -377,80 +366,54 @@
           <div class="col-md-6">
             <a href="https://inspektorat.kotabogor.go.id/" target="_blank" class="p-3 border rounded h-100 d-block text-decoration-none text-dark">
               <h6 class="fw-bold">Inspektorat Kota Bogor</h6>
-              <p class="small">Website Inspektorat Kota Bogor berfungsi sebagai saluran resmi bagi masyarakat untuk menyampaikan pengaduan (laporan) terkait kinerja pemerintah daerah</p>
+              <p class="small">Saluran resmi untuk pengaduan masyarakat terkait kinerja pemerintah daerah.</p>
             </a>
           </div>
-        </div> <!-- ✅ tutup row -->
-      </div> <!-- ✅ tutup modal-body -->
-
-      <!-- Footer -->
-      <div class="modal fade" id="layananModal" tabindex="-1" aria-labelledby="layananModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="layananModalLabel">Layanan Aduan Diskominfo Kota Bogor</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <ul class="list-unstyled">
-                    <li class="mb-3">
-                        <a href="#" class="d-flex align-items-center p-2 border rounded text-decoration-none text-dark">
-                            <i class="fas fa-file-lines fa-2x me-3 text-success"></i>
-                            <p class="mb-0">SIBADRA "Sistem Informasi Berbagi Aduan Saran"</p>
-                        </a>
-                    </li>
-                      <li class="mb-3">
-                          <a href="#" class="d-flex align-items-center p-2 border rounded text-decoration-none text-dark">
-                              <i class="fas fa-shield-halved fa-2x me-3 text-danger"></i>
-                              <p class="mb-0">Polresta Bogor Kota</p>
-                          </a>
-                      </li>
-                    <li class="mb-3">
-                        <a href="https://www.lapor.go.id/tentang" class="d-flex align-items-center p-2 border rounded text-decoration-none text-dark">
-                            <i class="fas fa-headphones fa-2x me-3 text-success"></i>
-                            <p class="mb-0">SP4N "Sistem Pengelolaan Pengaduan Pelayanan Publik Nasional" </p>
-                        </a>
-                    </li>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
-            </div>
         </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+      </div>
     </div>
-
+  </div>
 </div>
+
+<!-- Modal Layanan Aduan -->
 <div class="modal fade" id="layananModal" tabindex="-1" aria-labelledby="layananModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="layananModalLabel">Layanan Aduan Diskominfo Kota Bogor</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <ul class="list-unstyled">
-                    <li class="mb-3">
-                        <a href="#" class="d-flex align-items-center p-2 border rounded text-decoration-none text-dark">
-                            <i class="fas fa-file-lines fa-2x me-3 text-success"></i>
-                            <p class="mb-0">SIBADRA "Sistem Informasi Berbagi Aduan Saran"</p>
-                        </a>
-                    </li>
-                      <li class="mb-3">
-                          <a href="#" class="d-flex align-items-center p-2 border rounded text-decoration-none text-dark">
-                              <i class="fas fa-shield-halved fa-2x me-3 text-danger"></i>
-                              <p class="mb-0">Polresta Bogor Kota</p>
-                          </a>
-                      </li>
-                    <li class="mb-3">
-                        <a href="https://www.lapor.go.id/tentang" class="d-flex align-items-center p-2 border rounded text-decoration-none text-dark">
-                            <i class="fas fa-headphones fa-2x me-3 text-success"></i>
-                            <p class="mb-0">SP4N "Sistem Pengelolaan Pengaduan Pelayanan Publik Nasional" </p>
-                        </a>
-                    </li>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
-            </div>
-        </div>
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="layananModalLabel">Layanan Aduan Diskominfo Kota Bogor</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <ul class="list-unstyled">
+          <li class="mb-3">
+            <a href="https://sibadra.kotabogor.go.id/#/" class="d-flex align-items-center p-2 border rounded text-decoration-none text-dark">
+              <i class="fas fa-file-lines fa-2x me-3 text-success"></i>
+              <p class="mb-0">SIBADRA "Sistem Informasi Berbagi Aduan Saran"</p>
+            </a>
+          </li>
+          <li class="mb-3">
+            <a href="https://bogorkota.jabar.polri.go.id/" class="d-flex align-items-center p-2 border rounded text-decoration-none text-dark">
+              <i class="fas fa-shield-halved fa-2x me-3 text-danger"></i>
+              <p class="mb-0">Polresta Bogor Kota</p>
+            </a>
+          </li>
+          <li class="mb-3">
+            <a href="https://www.lapor.go.id/tentang" target="_blank" class="d-flex align-items-center p-2 border rounded text-decoration-none text-dark">
+              <i class="fas fa-headphones fa-2x me-3 text-success"></i>
+              <p class="mb-0">SP4N "Sistem Pengelolaan Pengaduan Pelayanan Publik Nasional"</p>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+      </div>
     </div>
+  </div>
+</div>
+
 </body>
 </html>
