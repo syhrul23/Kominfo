@@ -51,24 +51,23 @@
   <!-- Carousel -->
   <main>
 
-    <!-- sidebar -->
   <div class="floating-icon-bar">
   <a href="#" id="tombolBeriPenilaian" class="tooltip-icon">
     <i class="fas fa-smile"></i>
     <span class="tooltip-text">Beri Penilaian</span>
   </a>
-  <a href="#" class="tooltip-icon">
-    <i class="fas fa-bullhorn"></i>
-    <span class="tooltip-text">Aspirasi</span>
-  </a>
+ <a href="#" class="tooltip-icon" data-bs-toggle="modal" data-bs-target="#layananModal">
+    <i class="fas fa-bullhorn"></i>
+    <span class="tooltip-text">Aduan Warga</span>
+</a>
   <a href="#" class="tooltip-icon" id="openAccessibilityMenuButton">
     <i class="fas fa-child"></i>
     <span class="tooltip-text">Aksesbilitas</span>
   </a>
-  <a href="#" class="tooltip-icon">
-    <i class="fas fa-stopwatch"></i>
-    <span class="tooltip-text">Monitoring</span>
-  </a>
+<a href="#" class="tooltip-icon" data-bs-toggle="modal" data-bs-target="#aksesCepatModal">
+    <i class="fas fa-bolt"></i>
+    <span class="tooltip-text">Akses Cepat</span>
+</a>
 </div>
 <section class="hero-judul">
   <div class="hero-overlay"></div> <!-- gelap tipis -->
@@ -141,55 +140,50 @@
 
 </section>
 <!-- Footer -->
- <footer class="footer">
-  <div class="footer-container">
-   <div class="footer-map">
-  <iframe
-    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.4161454299747!2d106.79109007413658!3d-6.595089664468269!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69c5b7d2e12d0d%3A0x9b59e38fc692d9fe!2sKantor%20Kominfo%20Kota%20Bogor!5e0!3m2!1sen!2sid!4v1752851198269!5m2!1sen!2sid"width="300"
-    height="200"
-    style="border:0;"
-    allowfullscreen=""
-    loading="lazy"
-    referrerpolicy="no-referrer-when-downgrade">
-  </iframe>
-</div>
+ <footer>
+    <div class="footer-container">
+        <!-- Kolom 1: Google Maps -->
+        <div class="footer-col">
+    <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.416102757582!2d106.79366499999999!3d-6.595095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69c5b7d2e12d0d%3A0x9b59e38fc692d9fe!2sKantor%20DISKOMINFO%20Kota%20Bogor!5e0!3m2!1sid!2sid!4v1755157383311!5m2!1sid!2sid" 
+        width="300" 
+        height="200" 
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy">
+    </iframe>
+  </div>
 
-    <div class="footer-kontak">
-      <h4>Kontak Kami</h4>
-       <p>
-    Jl. Ir. H. Juanda No.10, RT.01/RW.01, Pabaton,<br>
-    Kecamatan Bogor Tengah, Kota Bogor, Jawa Barat 16121<br><br>
-    Telp: <a href="tel:+622518321075">+62251-8321075 Ext. 287</a><br>
-    e-mail Admin Web: <a href="mailto:kominfo@kotabogor.go.id" target="_blank">kominfo@kotabogor.go.id</a>
-  </p>
-      <div class="sosmed">
-  <a href="https://www.facebook.com/kominfokotabogor" target="_blank" rel="noopener"><img src="fb.png" alt="Facebook"></a>
-  <a href="https://www.instagram.com/kominfobogor?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener"><img src="instagram.png" alt="Instagram"></a>
-  <a href="https://youtube.com/@kominfokotabogor2892?si=DYzwmdH5Fa8aDNeZ" target="_blank" rel="noopener"><img src="youtube.png" alt="YouTube"></a>
-  <a href="https://x.com/kominfobogor" target="_blank" rel="noopener"><img src="twitter.png" class="logo-x" alt="Twitter/X"></a>
-</div>
-    </div>
-    <div class="footer-statistik">
-      <h4>Statistik Pengunjung</h4>
-      <ul>
-        <li>➡️ Hari ini <span>123</span></li>
-        <li>➡️ Kemarin <span>12345</span></li>
-        <li>➡️ Bulan ini <span>1234567</span></li>
-        <li>➡️ Tahun ini <span>12345678</span></li>
-        <li>➡️ Semua Waktu <span>123456789</span></li>
-      </ul>
-    </div>
+        <!-- Kolom 2: Alamat & Kontak -->
+        <div class="footer-col">
+            <h3>Kontak Kami</h3>
+            <p>Jl. Ir. H. Juanda No.10, RT.01/RW.01, Pabaton,<br>
+               Kecamatan Bogor Tengah, Kota Bogor, Jawa Barat 16121</p>
+            <p>Telp: <a href="tel:+622518321075">+62251-8321075 Ext. 287</a><br>
+               e-mail Admin Web: <a href="mailto:kominfo@kotabogor.go.id">kominfo@kotabogor.go.id</a></p>
+        </div>
+
+        <!-- Kolom 3: Sosial Media & Copyright -->
+        <div class="footer-col social-col">
+            <div class="social-icons">
+                <a href="https://www.instagram.com/kominfobogor?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com/kominfobogor/?locale=id_ID" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://x.com/kominfobogor" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.youtube.com/@diskominfokotabogor554" target="_blank"><i class="fab fa-youtube"></i></a>
+            </div>
+            <p class="copyright">© Dinas Komunikasi dan Informatika Kota Bogor</p>
+        </div>
     </div>
 </footer>
 <!-- Footer -->
  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
   <script src="https://website-widgets.pages.dev/dist/sienna.min.js" data-asw-lang="id" data-asw-position="hidden"></script>
   <script src="scripts.js"></script>
-  <div id="modalPenilaian" class="modal">
+<!-- Modal Penilaian -->
+<div id="modalPenilaian" class="modal">
   <div class="modal-content">
     <span class="close-button">&times;</span>
     <h2>Berikan Masukan untuk Perbaikan Portal</h2>
-    
     <form>
       <div class="form-group">
         <label>Seberapa Puas Anda dengan Website Diskominfo Kota Bogor</label>
@@ -197,18 +191,15 @@
           <span>😞</span> <span>😐</span> <span>😊</span> <span>😍</span>
         </div>
       </div>
-      
       <div class="form-group">
         <label>Apakah Anda dapat menemukan berita/informasi layanan publik/agenda yang Anda cari?</label>
         <input type="radio" name="info" value="tidak"> Tidak
         <input type="radio" name="info" value="ya"> Ya
       </div>
-      
       <div class="form-group">
-        <label for="kritik">Kritik dan saran Anda untuk Portal Jabarprov?</label>
+        <label for="kritik">Kritik dan saran Anda untuk Website Diskominfo Kota Bogor?</label>
         <textarea id="kritik" rows="4" placeholder="Masukkan jawaban Anda di sini"></textarea>
       </div>
-
       <div class="modal-footer">
         <button type="button" id="tombolTutupModal" class="btn-tutup">Tutup</button>
         <button type="submit" class="btn-kirim">Kirim Masukan</button>
@@ -217,7 +208,98 @@
   </div>
 </div>
 
+<!-- Modal Akses Cepat -->
+<div class="modal fade" id="aksesCepatModal" tabindex="-1" aria-labelledby="aksesCepatModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header flex-column align-items-start sticky-top bg-white">
+        <h5 class="modal-title text-success" id="aksesCepatModalLabel">Akses Cepat</h5>
+        <p class="mb-0 text-muted">Dapatkan kemudahan akses ke beberapa layanan Pemerintah Diskominfo Kota Bogor.</p>
+        <button type="button" class="btn-close position-absolute end-0 top-0 m-3" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body" style="max-height: 60vh; overflow-y: auto;">
+        <div class="row g-3">
+          <div class="col-md-6">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdH4_yWT-6GeCr5zz_NJMRxuCOJeUcKfDo52lqnaOCR4qNerg/viewform" target="_blank" class="p-3 border rounded h-100 d-block text-decoration-none text-dark">
+              <h6 class="fw-bold">Pengajuan TTE</h6>
+              <p class="small">Tanda tangan elektronik ini digunakan sebagai alat untuk mengesahkan dokumen atau transaksi elektronik.</p>
+            </a>
+          </div>
+          <div class="col-md-6">
+            <a href="https://wa.me/6281122882233" target="_blank" class="p-3 border rounded h-100 d-block text-decoration-none text-dark">
+              <h6 class="fw-bold">Chat Bogor Citizen Support</h6>
+              <p class="small">Layanan chat warga Kota Bogor untuk komunikasi dengan staf Bogor Citizen Support.</p>
+            </a>
+          </div>
+          <div class="col-md-6">
+            <a href="#" target="_blank" class="p-3 border rounded h-100 d-block text-decoration-none text-dark">
+              <h6 class="fw-bold">Pembuatan Email Dinas</h6>
+              <p class="small">Proses pembuatan email resmi untuk instansi pemerintah.</p>
+            </a>
+          </div>
+          <div class="col-md-6">
+            <a href="https://ppid.kotabogor.go.id/" target="_blank" class="p-3 border rounded h-100 d-block text-decoration-none text-dark">
+              <h6 class="fw-bold">PPID</h6>
+              <p class="small">Pejabat Pengelola Informasi Dan Dokumentasi Kota Bogor</p>
+            </a>
+          </div>
+          <div class="col-md-6">
+            <a href="https://inspektorat.kotabogor.go.id/" target="_blank" class="p-3 border rounded h-100 d-block text-decoration-none text-dark">
+              <h6 class="fw-bold">Inspektorat Kota Bogor</h6>
+              <p class="small">Saluran resmi untuk pengaduan masyarakat terkait kinerja pemerintah daerah.</p>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Layanan Aduan -->
+<div class="modal fade" id="layananModal" tabindex="-1" aria-labelledby="layananModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="layananModalLabel">Layanan Aduan Diskominfo Kota Bogor</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <ul class="list-unstyled">
+          <li class="mb-3">
+            <a href="https://sibadra.kotabogor.go.id/#/" class="d-flex align-items-center p-2 border rounded text-decoration-none text-dark">
+              <i class="fas fa-file-lines fa-2x me-3 text-success"></i>
+              <p class="mb-0">SIBADRA "Sistem Informasi Berbagi Aduan Saran"</p>
+            </a>
+          </li>
+          <li class="mb-3">
+            <a href="https://bogorkota.jabar.polri.go.id/" class="d-flex align-items-center p-2 border rounded text-decoration-none text-dark">
+              <i class="fas fa-shield-halved fa-2x me-3 text-danger"></i>
+              <p class="mb-0">Polresta Bogor Kota</p>
+            </a>
+          </li>
+          <li class="mb-3">
+            <a href="https://www.lapor.go.id/tentang" target="_blank" class="d-flex align-items-center p-2 border rounded text-decoration-none text-dark">
+              <i class="fas fa-headphones fa-2x me-3 text-success"></i>
+              <p class="mb-0">SP4N "Sistem Pengelolaan Pengaduan Pelayanan Publik Nasional"</p>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="scripts.js"></script>
 </body>
 </html>
   
+
   
