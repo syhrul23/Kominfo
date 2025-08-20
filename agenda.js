@@ -6,15 +6,6 @@ const agendaListEl = document.getElementById("agendaList");
 let current = new Date();
 
 const agendaDummy = {
-  "2025-07-29": [
-    {
-      title: "Sosialisasi kepada masyarakat daerah",
-      time: "08:00 - 12:00 WIB",
-      organizer: "Kepala Dinas Kominfo Kota Bogor",
-      type: ["Agenda Offline", "Pimpinan"],
-      status: "Terjadwal"
-    }
-  ],
    "2025-08-07": [
     {
       title: "Sosialisasi kepada masyarakat daerah",
@@ -107,4 +98,5 @@ function changeMonth(diff) {
 }
 
 renderCalendar(current);
+
 
